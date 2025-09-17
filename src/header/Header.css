@@ -19,7 +19,7 @@
     height: 80px;
     width: 100%;
 
-    background-color: black;
+    background-color: rgb(199, 128, 128);
 }
 
 .Logo {
@@ -32,4 +32,95 @@
     height: 48px;
     width: 118px;
     overflow: clip;
+}
+
+.relative{
+    position: relative !important;
+}
+
+.Location{
+    z-index: 1;
+    color: var(--gray-700);
+}
+
+.LocationInput{
+    /* .kVhcLF:placeholder-shown */
+    text-overflow: ellipsis;
+
+    /* .fyvtzI input */
+    max-width: 180px;
+    background-color: aqua;
+    border: none;
+
+    /* .dXyAJL input */
+    height: 36px;
+    width: 100%;
+    box-shadow: unset;
+
+    /* .kVhcLF */
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    transition: 0.5s 
+    cubic-bezier(0.22, 1.19, 0.22, 0.95);
+    outline: none;
+    border-radius: 8px;
+    padding: 12px 44px;
+    color: var(--gray-700);
+    caret-color: var(--primary-600);
+
+    /* .font-highlight */
+    font-family: "DB Heavent Now", sans-serif;
+
+    /* input */
+    font: inherit;
+    margin: 0;
+}
+
+.LocationIconWraper{
+    position: absolute;
+    left: 0px;
+    padding: 0px 8px 0px 12px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    transform: translateY(-50%);
+    top: 50%;
+    color: var(--gray-500);
+}
+
+.DropdownIconWraper{
+    position: absolute;
+    right: 0px;
+    padding: 0px 12px 0px 8px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    transform: translateY(-50%);
+    top: 50%;
+    color: var(--gray-500);
+
+
+}
+
+.DropdownIconWraper svg, .LocationIconWraper svg{
+    width: 24px !important;
+    height: 24px !important;
+}
+
+.HeaderLeft{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.SerachBoxContainer{
+    display: inline-block;
+    margin-left: 8px;
+    z-index: 1;
+    width: 315px;
 }
