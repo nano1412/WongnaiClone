@@ -49,7 +49,7 @@
 
     /* .fyvtzI input */
     max-width: 180px;
-    background-color: aqua;
+    background-color: var(--gray-75);
     border: none;
 
     /* .dXyAJL input */
@@ -123,4 +123,60 @@
     margin-left: 8px;
     z-index: 1;
     width: 315px;
+}
+
+.SerachBoxContainer{
+    display: inline-block;
+    margin-left: 8px;
+    z-index: 1;
+    width: 315px;
+}
+
+.SearchForm{
+    width: 100%;
+    display: flex;
+    position: relative !important;
+}
+
+.SearchInput{
+    font-size: 16px;
+    color: var(--gray-300);
+    text-overflow: ellipsis;
+    background: var(--gray-75);
+    height: 36px;
+    border-radius: 8px 0px 0px 8px;
+    border: none;
+    position: relative;
+    padding: 4px 8px 4px 60px;
+    caret-color: var(--primary-600);
+    width: 100%;
+    padding-left: 12px !important;
+    font-family: "DB Heavent Now", sans-serif;
+}
+
+.SearchSummit{
+        border-radius: 0px 8px 8px 0px;
+        display: flex
+;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: 0.3s 
+    cubic-bezier(0.22, 1.19, 0.22, 0.95);
+    font-family: "DB Heavent Now", sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    width: fit-content;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 6px 12px;
+    height: 36px;
+    background-color: var(--primary-600);
+    color: var(--gray-white);
+    text-transform: none;
+    overflow: visible;
 }
