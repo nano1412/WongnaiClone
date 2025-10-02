@@ -1,0 +1,27 @@
+.BreadcrumbBG{
+    background-color: var(--gray-white);
+    margin-bottom: 24px;
+}
+
+.BreadcrumbContainer{
+    margin: 0px auto;
+    padding: 16px 0px;
+}
+
+.BreadcrumbListContainer{
+    font-size: 14px;
+    color: var(--gray-300);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: "DB Heavent Now", sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+.BreadcrumbList{
+    display: flex;
+    flex-flow: wrap;
+    line-height: 28px;
+    padding: 4px 0px;
+}

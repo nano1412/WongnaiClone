@@ -195,6 +195,9 @@
 .LoginBlock{
     width: fit-content;
     z-index: 4;
+
+    display: flex;
+    position: relative;
 }
 
 .LoginButton{
@@ -225,6 +228,38 @@
     background: transparent;
 
         font: inherit;
+}
+
+.LoginDropDownButton{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    box-sizing: content-box;
+    border-radius: 50%;
+    border: 1px solid var(--gray-100);
+    width: 40px;
+    padding: 0px;
+    margin-left: 8px;
+
+    word-break: initial;
+    font-family: "DB Heavent Now", sans-serif;
+    font-size: 16px;
+    height: 40px;
+    -webkit-box-pack: center;
+    justify-content: center;
+
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--gray-850);
+    background: transparent;
+}
+
+.DropDownWraper{
+    padding-left: 1px;
+    padding-top: 1px;
+
+        box-sizing: border-box;
 }
 
 
