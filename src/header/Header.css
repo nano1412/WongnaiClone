@@ -180,3 +180,51 @@
     text-transform: none;
     overflow: visible;
 }
+
+.LoginContainer{
+    position: relative;
+    flex: 1 1 0%;
+    display: flex;
+    padding-left: 8px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+}
+
+.LoginBlock{
+    width: fit-content;
+    z-index: 4;
+}
+
+.LoginButton{
+    color: currentcolor;
+    text-decoration: none;
+}
+
+.LoginButton button{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    box-sizing: content-box;
+    border-radius: 20px;
+    border: 1px solid var(--gray-100);
+    padding: 0px 4px;
+
+    word-break: initial;
+    font-family: "DB Heavent Now", sans-serif;
+    font-size: 16px;
+    height: 40px;
+    width: auto;
+    -webkit-box-pack: center;
+    justify-content: center;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--gray-850);
+    background: transparent;
+
+        font: inherit;
+}
+
+
