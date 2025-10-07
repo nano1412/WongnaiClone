@@ -5,9 +5,11 @@ import './App.css'
 import './color.css'
 import './header/Header.css'
 import './breadcrumb/Breadcrumb.css'
+import './content/Content.css'
 
 import Header from './header/Header'
 import Breadcrumb from './breadcrumb/Breadcrumb'
+import Content from './content/Content'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -18,6 +20,7 @@ function App() {
       <div id='body' className='Body'>
         <div className='Content'>
           <Breadcrumb/>
+          <Content/>
         </div>
       </div>
     </>
