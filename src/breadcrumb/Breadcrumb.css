@@ -1,14 +1,16 @@
-.BreadcrumbBG{
+.BreadcrumbBG {
     background-color: var(--gray-white);
     margin-bottom: 24px;
 }
 
-.BreadcrumbContainer{
+.BreadcrumbContainer {
     margin: 0px auto;
     padding: 16px 0px;
+
+    max-width: 960px;
 }
 
-.BreadcrumbListContainer{
+.BreadcrumbListContainer {
     font-size: 14px;
     color: var(--gray-300);
     white-space: nowrap;
@@ -19,9 +21,61 @@
     padding: 0px;
 }
 
-.BreadcrumbList{
+.BreadcrumbListContainer > :last-child {
+    color: var(--gray-700);
+}
+
+.BreadcrumbList {
     display: flex;
     flex-flow: wrap;
     line-height: 28px;
     padding: 4px 0px;
+}
+
+.listEntry {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    line-height: 28px;
+}
+
+.listEntry>* {
+    vertical-align: middle;
+}
+
+.listEntry a {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--gray-300);
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.slash {
+    align-self: center;
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+
+.slash pre {
+    margin: 0px;
+    font-family: monospace, monospace;
+    font-size: 1em;
+    color: var(--gray-300);
+    overflow: auto;
+}
+
+.Title{
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    color: var(--gray-700);
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 36px;
+    margin: 0px !important;
 }
