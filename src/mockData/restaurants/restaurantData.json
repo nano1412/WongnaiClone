@@ -12,7 +12,8 @@
     "take_out_only": false,
     "isAds": false,
     "ads_text": "",
-    "image_dir": "SiamGardenBistro_img"
+    "image_dir": "SiamGardenBistro_img",
+    "image_count": 6
   },
   {
     "restaurant_name": "Mama’s Street Noodles",
@@ -27,7 +28,8 @@
     "take_out_only": false,
     "isAds": false,
     "ads_text": "",
-    "image_dir": "MamasStreetNoodles_img"
+    "image_dir": "MamasStreetNoodles_img",
+    "image_count": 0
   },
   {
     "restaurant_name": "The Blue Elephant",
@@ -42,7 +44,8 @@
     "take_out_only": false,
     "isAds": true,
     "ads_text": "Experience royal Thai dining — book your table now!",
-    "image_dir": "TheBlueElephant_img"
+    "image_dir": "TheBlueElephant_img",
+    "image_count": 0
   },
   {
     "restaurant_name": "Bangkok Vegan Kitchen",
@@ -57,7 +60,8 @@
     "take_out_only": false,
     "isAds": false,
     "ads_text": "",
-    "image_dir": "BangkokVeganKitchen_img"
+    "image_dir": "BangkokVeganKitchen_img",
+    "image_count": 0
   },
   {
     "restaurant_name": "Nana Night BBQ",
@@ -72,7 +76,8 @@
     "take_out_only": false,
     "isAds": true,
     "ads_text": "Coming soon! All-you-can-eat BBQ — opening next month!",
-    "image_dir": "NanaNightBBQ_img"
+    "image_dir": "NanaNightBBQ_img",
+    "image_count": 0
   },
   {
     "restaurant_name": "Lotus Blossom Café",
@@ -87,7 +92,8 @@
     "take_out_only": true,
     "isAds": false,
     "ads_text": "",
-    "image_dir": "LotusBlossomCafe_img"
+    "image_dir": "LotusBlossomCafe_img",
+    "image_count": 0
   },
   {
     "restaurant_name": "Riverside Seafood Market",
@@ -102,7 +108,8 @@
     "take_out_only": false,
     "isAds": true,
     "ads_text": "Fresh seafood feast by the Chao Phraya — reserve today!",
-    "image_dir": "RiversideSeafoodMarket_img"
+    "image_dir": "RiversideSeafoodMarket_img",
+    "image_count": 0
   },
   {
     "restaurant_name": "Tom Yum Factory",
@@ -117,6 +124,7 @@
     "take_out_only": false,
     "isAds": false,
     "ads_text": "",
-    "image_dir": "TomYumFactory_img"
+    "image_dir": "TomYumFactory_img",
+    "image_count": 0
   }
 ]

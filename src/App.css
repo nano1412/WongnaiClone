@@ -41,3 +41,9 @@ h1, h2, h3, h4, h5, h6 {
     border: 1px solid var(--gray-75);
     background-color: var(--gray-white);
 }
+
+a {
+    color: var(--blue-600);
+    text-decoration: none;
+    background-color: transparent;
+}
