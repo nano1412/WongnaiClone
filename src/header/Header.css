@@ -6,20 +6,20 @@
     height: 80px;
     width: 100%;
     background-color: white;
+
+    position: relative;
+    z-index: 3;
 }
 
 .HeaderContainer {
     padding: 0px calc(-492px + 50vw);
+    height: 80px;
+    background: var(--gray-white);
+    border-bottom: 1px solid var(--gray-75);
 
-    position: relative;
     display: flex;
     -webkit-box-align: center;
     align-items: center;
-
-    height: 80px;
-    width: 100%;
-
-    background-color: rgb(199, 128, 128);
 }
 
 .Logo {
@@ -260,6 +260,17 @@
     padding-top: 1px;
 
         box-sizing: border-box;
+}
+
+.HeaderRight{
+    position: relative;
+    flex: 1 1 0%;
+    display: flex;
+    padding-left: 8px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
 }
 
 

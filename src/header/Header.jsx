@@ -32,12 +32,12 @@ const SearchBar = () => {
                     </div>
                 </div>
             </div>
-            
+
             <div className='SerachBoxContainer'>
                 <form className='SearchForm'>
                     <input autoComplete="off" enterKeyHint="search" maxLength="200" name="displayQ" placeholder="ร้านอาหาร โรงแรม ที่เที่ยว ร้านเสริมสวย สปา ..." defaultValue="" className='SearchInput' />
                     <button title="Search" type="submit" className='SearchSummit'>
-                        <img src='../assets/search-outline.svg'/>
+                        <img src='../assets/search-outline.svg' />
                     </button>
                 </form>
             </div>
@@ -45,20 +45,20 @@ const SearchBar = () => {
     )
 }
 
-const Login = () =>{
-    return(
+const Login = () => {
+    return (
         <>
             <div className='LoginContainer'>
                 <div className='LoginBlock'>
                     <a href='toLogin(notImprement)' className='LoginButton'>
                         <button>
-                            <img src='../assets/search-outline.svg'/>
+                            <img src='../assets/search-outline.svg' />
                             <span> เข้าสู่ระบบ</span>
                         </button>
                     </a>
                     <button className='LoginDropDownButton'>
                         <div className='DropDownWraper'>
-                            <img src='../assets/search-outline.svg'/>
+                            <img src='../assets/search-outline.svg' />
                         </div>
                     </button>
 
@@ -78,11 +78,8 @@ function Header() {
                         <SearchBar />
                     </div>
                     <div className='HeaderRight'>
-                        <Login/>
+                        <Login />
                     </div>
-
-
-
                 </div>
             </div>
         </>

@@ -42,7 +42,7 @@ function Breadcrumb() {
             <div className="BreadcrumbBG">
                 <div className="BreadcrumbContainer">
                     <BreadcrumbText items={breadcrumbItems} />
-                    <h1 className="Title">ร้านอาหาร ยอดนิยม ในกรุงเทพและปริมณฑล</h1>
+                    <h1 className="Title">ร้านอาหาร ยอดนิยม</h1>
                 </div>
             </div>
         </>
