@@ -340,6 +340,10 @@
     font-size: 16px;
 }
 
+.OpenGreen{
+    color: var(--green-600);
+}
+
 .CloseRed {
     color: var(--red-600);
 }
@@ -347,4 +351,19 @@
 .SoonOrange {
     color: var(--orange-600);
     /* have to change the color later, there're no "soon" restaurant rn */
+}
+
+.TagContainer {
+    width: fit-content;
+}
+
+.TagContainer span {
+    color: var(--gray-500);
+}
+
+.TagContainer a {
+    position: relative;
+    display: inline-block;
+    color: var(--gray-500);
+    text-decoration: none;
 }

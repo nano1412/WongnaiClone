@@ -21,7 +21,7 @@ const ImageContent = ({ restaurant }) => {
             <div className="Restaurant-ImageContainer-Padding">
                 <div className="Restaurant-ImageContainer">
                     {images.map((src, index) => (
-                        <div>
+                        <div key={index}>
                             <a className="ImgBlock" href={handleImageClick(index)}>
                                 <img key={index}
                                     src={images[index]}
@@ -68,7 +68,7 @@ const AverageReview = ({ restaurant }) => {
                     <div>{restaurant.review_score}</div>
                     <span className="StarIcon">
                         <svg>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.4951 3.85631C11.388 3.54051 11.0945 3.3365 10.7478 3.3365H8.82997C8.14851 3.3365 7.54909 2.9197 7.33852 2.29933L6.74587 0.55355C6.63877 0.237818 6.34535 0.0338135 5.99848 0.0338135C5.65162 0.0338135 5.35827 0.237818 5.25118 0.553478L4.65852 2.29933C4.44795 2.9197 3.84853 3.3365 3.16707 3.3365H1.24929C0.902499 3.3365 0.609145 3.54051 0.501979 3.85624C0.394812 4.17197 0.506871 4.50211 0.78743 4.69725L2.33894 5.77613C2.89028 6.15965 3.11921 6.83404 2.90864 7.45441L2.31599 9.20041C2.20882 9.516 2.32088 9.84607 2.60144 10.0412C2.73901 10.1369 2.8987 10.1875 3.06337 10.1875C3.22796 10.1875 3.38773 10.137 3.52522 10.0413L5.07673 8.96226C5.62814 8.57889 6.36898 8.57896 6.92024 8.96233L8.47182 10.0412C8.6121 10.1388 8.77293 10.1877 8.93368 10.1877C9.09443 10.1877 9.25525 10.1389 9.39553 10.0413C9.67617 9.84614 9.78822 9.51607 9.68106 9.20041L9.08841 7.45441C8.87784 6.83404 9.10677 6.15965 9.6581 5.7762L11.2096 4.69725C11.4902 4.50211 11.6023 4.17204 11.4951 3.85631Z" fill="currentColor"></path>
+                            <path fillRule="evenodd" clipRule="evenodd" d="M11.4951 3.85631C11.388 3.54051 11.0945 3.3365 10.7478 3.3365H8.82997C8.14851 3.3365 7.54909 2.9197 7.33852 2.29933L6.74587 0.55355C6.63877 0.237818 6.34535 0.0338135 5.99848 0.0338135C5.65162 0.0338135 5.35827 0.237818 5.25118 0.553478L4.65852 2.29933C4.44795 2.9197 3.84853 3.3365 3.16707 3.3365H1.24929C0.902499 3.3365 0.609145 3.54051 0.501979 3.85624C0.394812 4.17197 0.506871 4.50211 0.78743 4.69725L2.33894 5.77613C2.89028 6.15965 3.11921 6.83404 2.90864 7.45441L2.31599 9.20041C2.20882 9.516 2.32088 9.84607 2.60144 10.0412C2.73901 10.1369 2.8987 10.1875 3.06337 10.1875C3.22796 10.1875 3.38773 10.137 3.52522 10.0413L5.07673 8.96226C5.62814 8.57889 6.36898 8.57896 6.92024 8.96233L8.47182 10.0412C8.6121 10.1388 8.77293 10.1877 8.93368 10.1877C9.09443 10.1877 9.25525 10.1389 9.39553 10.0413C9.67617 9.84614 9.78822 9.51607 9.68106 9.20041L9.08841 7.45441C8.87784 6.83404 9.10677 6.15965 9.6581 5.7762L11.2096 4.69725C11.4902 4.50211 11.6023 4.17204 11.4951 3.85631Z" fill="currentColor"></path>
                         </svg>
                     </span>
 
@@ -81,7 +81,13 @@ const AverageReview = ({ restaurant }) => {
 const RestaurantStatus = ({ status }) => {
     switch (status) {
         case "open":
-            return null;
+                        return (
+                <>
+                    <span className="Status OpenGreen">
+                        เปิดอยู่
+                    </span>
+                </>
+            )
 
         case "closed":
             return (
@@ -116,11 +122,24 @@ const RestaurantStatus = ({ status }) => {
 
 }
 
-const Tag = ({restaurant}) =>{
+const RestaurantTag = ({ tags }) => {
     const tagJSON = restaurantJSON.tags
-    return(
+    return (
         <>
-        
+            <div className="TagContainer">
+                <span>
+                    {tags.map((tagId, index) => (
+                        <React.Fragment key={tagId}>
+                            <a href={`/businesses?categories=${tagId}`}>
+                                {tagJSON[tagId]}
+                            </a>
+                                {index < tags.length - 1 && ", "}
+
+                        </React.Fragment>
+
+                    ))}
+                </span>
+            </div>
         </>
     )
 }
@@ -135,7 +154,7 @@ const RestaurantDetail = ({ restaurant }) => {
                     <div className="SaveIcon">
                         <div data-inactiveicon="gray-bookmark">
                             <svg>
-                                <path d="M12 15.8241L17 17.9669V5L7 5L7 17.9669L12 15.8241ZM5 21V5C5 3.89543 5.89543 3 7 3H17C18.1046 3 19 3.89543 19 5V21L12 18L5 21Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
+                                <path d="M12 15.8241L17 17.9669V5L7 5L7 17.9669L12 15.8241ZM5 21V5C5 3.89543 5.89543 3 7 3H17C18.1046 3 19 3.89543 19 5V21L12 18L5 21Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd"></path>
                             </svg>
                         </div>
                     </div>
@@ -178,11 +197,11 @@ const RestaurantDetail = ({ restaurant }) => {
                     </div>
 
                 </div>
-                    <Tag restaurant = {restaurant}/>
+                <RestaurantTag tags={restaurant.tags} />
             </div>
 
             <div>
-                    {/* LM dilivery */}
+                {/* LM dilivery */}
             </div>
         </>
     )
