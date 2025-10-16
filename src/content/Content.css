@@ -42,7 +42,7 @@
     gap: 4px;
 }
 
-.Restaurant-ImageContainer :last-child div{
+.Restaurant-ImageContainer :last-child div {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -50,7 +50,7 @@
     left: 0px;
 }
 
-.Restaurant-ToGallery{
+.Restaurant-ToGallery {
     display: flex;
     -webkit-box-pack: center;
     justify-content: center;
@@ -61,10 +61,10 @@
     text-decoration: none;
 }
 
-.Restaurant-ToGallery span{
+.Restaurant-ToGallery span {
     transform: translateY(50%);
     margin-bottom: 15%;
-    
+
     color: rgb(255, 255, 255);
     text-shadow: rgba(0, 0, 0, 0.35) 0px 0px 2px;
 }
@@ -87,13 +87,13 @@
 }
 
 .ImgBlock img {
-    
+
     border-radius: 8px;
     border: 1px solid var(--gray-75);
     pointer-events: none;
 
     display: block;
-    
+
     position: relative;
     background-color: var(--gray-50);
     font-size: 0px;
@@ -104,4 +104,247 @@
 
     width: 107px;
     height: 107px;
+}
+
+.SaveIcon {
+    float: right;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.SaveIcon div {
+    margin-left: 4px;
+    margin-right: 4px;
+    position: relative !important;
+
+    float: right;
+    text-align: center;
+    cursor: pointer;
+}
+
+.SaveIcon svg {
+    color: var(--gray-700);
+
+    width: 24px !important;
+    height: 24px !important;
+}
+
+.RestaurantTitle {
+    display: inline;
+    margin-bottom: 4px;
+
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.RestaurantTitle> :not(:last-child) {
+    margin-right: 4px;
+}
+
+.RestaurantTitle a {
+    position: relative;
+}
+
+.IsAds {
+    display: inline;
+    margin-right: 4px;
+    color: var(--gray-700);
+    vertical-align: middle;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.RestaurantName {
+    vertical-align: middle;
+    color: var(--gray-700);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.RestaurantName div {
+    display: inline;
+    line-height: 24px;
+}
+
+.RestaurantName div> :not(:last-child) {
+    margin-right: 4px;
+}
+
+.RestaurantName>* {
+    vertical-align: baseline;
+    line-height: 20px;
+}
+
+.RestaurantName h5 {
+    font-weight: bold;
+    font-size: 18px;
+    color: inherit;
+    margin-bottom: 0px;
+    display: inline !important;
+}
+
+.RestaurantName span {
+    font-family: "DB Heavent Now", sans-serif;
+    color: var(--gray-500);
+    display: inline-block;
+    white-space: pre;
+
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.AdsText {
+    position: relative;
+
+    width: fit-content;
+    display: flex;
+    margin-bottom: 4px;
+
+    color: var(--blue-600);
+
+    cursor: pointer;
+
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.Restaurant-Review {
+    width: fit-content;
+
+    display: flex;
+    flex-flow: wrap;
+    margin-right: -8px;
+    margin-bottom: -8px;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.Restaurant-Review>* {
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+.ReviewContainer {
+    display: flex;
+    flex-flow: wrap;
+    margin-right: -8px;
+    margin-bottom: -8px;
+    -webkit-box-align: center;
+    align-items: center;
+
+}
+
+.ReviewContainer>* {
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+
+.StarBlock {
+    margin-right: 8px;
+    margin-bottom: 8px;
+
+    font-size: 14px;
+
+    display: inline-flex;
+}
+
+.StarBG {
+    font-weight: 500;
+    line-height: 14px;
+    min-height: 18px;
+    border-radius: 6px;
+    padding: 0px 4px;
+    font-family: "DB Heavent Now", sans-serif;
+    color: var(--gray-white);
+    display: inline-flex;
+
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+
+}
+
+.StarBG> :not(:last-child) {
+    margin-right: 2px;
+}
+
+.StarIcon {
+    text-size-adjust: none;
+    display: inline-flex;
+    pointer-events: none;
+}
+
+.StarIcon svg {
+    width: 12px !important;
+    height: 12px !important;
+    overflow: hidden;
+}
+
+.Orange {
+    background: rgb(249, 87, 0);
+    border: 1px solid rgb(249, 87, 0);
+}
+
+.Red {
+    background: rgb(205, 18, 1);
+    border: 1px solid rgb(205, 18, 1);
+}
+
+.DeepRed {
+    background: rgb(136, 11, 11);
+    border: 1px solid rgb(136, 11, 11);
+}
+
+.ReviewCount {
+    position: relative;
+    display: inline-block;
+    background-color: transparent;
+    color: var(--blue-600);
+    text-decoration: none;
+}
+
+.ReviewCount span {
+    color: var(--gray-500);
+    text-size-adjust: none;
+    vertical-align: middle;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: normal;
+}
+
+.PriceLevel {
+    color: var(--gray-500);
+    text-size-adjust: none;
+
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+
+}
+
+.Status {
+    text-size-adjust: none;
+    vertical-align: bottom;
+
+    font-family: "DB Heavent Now", sans-serif;
+    display: inline-block;
+    line-height: 16px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.CloseRed {
+    color: var(--red-600);
+}
+
+.SoonOrange {
+    color: var(--orange-600);
+    /* have to change the color later, there're no "soon" restaurant rn */
 }
