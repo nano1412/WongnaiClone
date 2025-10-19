@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-import restaurantJSON from '../mockData/restaurants/restaurantData.json'
-import placeholderImg from "/restaurants_img/PlaceHolder.jpeg"
+import restaurantJSON from '../../mockData/restaurants/restaurantData.json'
+const placeholderImg = "/image/PlaceHolder.jpeg"
 
 const ImageContent = ({ restaurant }) => {
     const imagesToShow = 5;

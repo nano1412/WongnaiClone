@@ -5,11 +5,11 @@ import './App.css'
 import './color.css'
 import './header/Header.css'
 import './breadcrumb/Breadcrumb.css'
-import './content/Content.css'
+import './body/content/Content.css'
 
 import Header from './header/Header'
 import Breadcrumb from './breadcrumb/Breadcrumb'
-import Content from './content/Content'
+import Content from './body/content/Content'
 
 function App() {
   const [count, setCount] = useState(0)

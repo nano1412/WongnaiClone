@@ -349,8 +349,7 @@
 }
 
 .SoonOrange {
-    color: var(--orange-600);
-    /* have to change the color later, there're no "soon" restaurant rn */
+    color: var(--yellow-700);
 }
 
 .TagContainer {
