@@ -7,6 +7,9 @@ import './color.css'
 import './header/Header.css'
 import '@/body/breadcrumb/Breadcrumb.css'
 import '@/body/content/Content.css'
+import '@/body/banner/Banner.css'
+import '@/body/FilterPanel/FilterPanel.css'
+import '@/body/SideBar/SideBar.css'
 
 
 import Header from '@/header/Header'
@@ -16,7 +19,6 @@ import Body from '@/body/Body'
 
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>

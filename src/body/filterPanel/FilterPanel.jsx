@@ -1,4 +1,4 @@
-function Banner(){
+function FilterPanel(){
     return (
         <>
         
@@ -6,4 +6,4 @@ function Banner(){
     )
 }
 
-export default Banner
+export default FilterPanel

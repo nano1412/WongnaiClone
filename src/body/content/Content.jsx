@@ -299,46 +299,14 @@ const Restaurant = ({ restaurant }) => {
     )
 }
 
-const TempBlock = (props) => {
-    return (
-        <>
-            <div className="base-block">
-                <span>{props.text}</span>
-            </div>
-        </>
-    )
-}
-
 function Content() {
     const restaurantData = restaurantJSON.restaurants
 
     return (
         <>
-            <div className="PageContainer">
-                <div className="SidePanel base-block">
-
-                </div>
-                <div className="MainContent">
-                    <div className="Banner base-block"></div>
-
-                    <div className="RestaurantContainer">
-                        <div>
-                            {restaurantData.map((item, index) => (
+           {restaurantData.map((item, index) => (
                                 <Restaurant key={index} restaurant={item} />
                             ))}
-                        </div>
-
-                        <div>
-                            <TempBlock text={"map"} />
-                            <TempBlock text={"ร้านอาหารที่น่าสนใจ"} />
-                            <TempBlock text={"บทความ"} />
-                            <TempBlock text={"ลิสต์แนะนำ"} />
-                        </div>
-
-
-                    </div>
-                </div>
-            </div>
         </>
     )
 }
