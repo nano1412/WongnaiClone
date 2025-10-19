@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 
 import restaurantJSON from '../../mockData/restaurants/restaurantData.json'
-const placeholderImg = "/image/PlaceHolder.jpeg"
+
+
 
 const ImageContent = ({ restaurant }) => {
+    const placeholderImg = "/image/PlaceHolder.jpeg"
+
     const imagesToShow = 5;
     const fullPath = `/restaurants_img/${restaurant.image_dir}`;
     const images = Array.from({ length: 5 }, (_, i) => `${fullPath}/${i + 1}.jpg`);
@@ -81,7 +84,7 @@ const AverageReview = ({ restaurant }) => {
 const RestaurantStatus = ({ status }) => {
     switch (status) {
         case "open":
-                        return (
+            return (
                 <>
                     <span className="Status OpenGreen">
                         เปิดอยู่
@@ -133,7 +136,7 @@ const RestaurantTag = ({ tags }) => {
                             <a href={`/businesses?categories=${tagId}`}>
                                 {tagJSON[tagId]}
                             </a>
-                                {index < tags.length - 1 && ", "}
+                            {index < tags.length - 1 && ", "}
 
                         </React.Fragment>
 
@@ -199,10 +202,74 @@ const RestaurantDetail = ({ restaurant }) => {
                 </div>
                 <RestaurantTag tags={restaurant.tags} />
             </div>
+        </>
+    )
+}
 
-            <div>
-                {/* LM dilivery */}
+const DeliveryOptions = ({ restaurant }) => {
+    const lineManIcon = '/image/lineman.svg'
+    const pickupIcon = '/image/pickup.svg'
+
+    const diliveryData = [
+        {
+            icon: lineManIcon,
+            title: "เดลิเวอรี่",
+            text: "ค่าส่งเริ่มต้น 0 บาท *ภายในระยะทางที่กำหนด",
+            link: "delivery"
+        },
+
+        {
+            icon: pickupIcon,
+            title: "สั่งไว้รับเลย",
+            text: "สั่งล่วงหน้า รับเองที่ร้าน",
+            link: "pickupfood"
+        }
+    ]
+
+    return (
+        <>
+            <div className="DeliveryOptionsContainer">
+                {restaurant.delivery && <DeliveryOption option={diliveryData[0]} />}
+                {restaurant.pickup && <DeliveryOption option={diliveryData[1]} />}
+
             </div>
+        </>
+    )
+}
+
+const DeliveryOption = ({ option }) => {
+    return (
+        <>
+            <a href={option.link} className="DeliveryOptionBlock">
+                <div className="DeliveryOptionBG">
+                    <div className="DeliveryOptionContent">
+                        <div className="DeliveryOptionIcon">
+                            <div>
+                                <img src={option.icon} alt={option.title} />
+                            </div>
+                        </div>
+                        <div className="DeliveryOptionTextBlock">
+                            <div>
+
+                                <div className="DeliveryOptionTitle">
+                                    <div>{option.title}</div>
+                                </div>
+                                <div className="DeliveryOptionText">
+                                    <span>{option.text}</span>
+                                    <div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button className="OrderButton">
+                        <span>สั่ง</span>
+                    </button>
+                </div>
+            </a>
+
+
+
+
         </>
     )
 }
@@ -222,6 +289,8 @@ const Restaurant = ({ restaurant }) => {
 
                     <ImageContent restaurant={restaurant} />
                     <RestaurantDetail restaurant={restaurant} />
+
+                    {(restaurant.delivery || restaurant.pickup) && <DeliveryOptions restaurant={restaurant} />}
 
 
                 </div>

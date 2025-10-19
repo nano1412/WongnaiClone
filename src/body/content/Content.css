@@ -340,7 +340,7 @@
     font-size: 16px;
 }
 
-.OpenGreen{
+.OpenGreen {
     color: var(--green-600);
 }
 
@@ -365,4 +365,159 @@
     display: inline-block;
     color: var(--gray-500);
     text-decoration: none;
+}
+
+.DeliveryOptionsContainer {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 12px !important;
+}
+
+.DeliveryOptionsContainer :not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.DeliveryOptionsContainer a {
+    position: relative;
+}
+
+.DeliveryOptionBlock {
+    color: currentcolor;
+    text-decoration: none;
+}
+
+.DeliveryOptionBG {
+    border-radius: 8px;
+    background-color: var(--gray-25);
+
+    display: flex;
+
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+
+    font-family: "DB Heavent Now", sans-serif;
+}
+
+.DeliveryOptionContent {
+    flex: 1 1 0%;
+
+    display: flex;
+    flex-direction: row;
+
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+}
+
+.DeliveryOptionContent> :not(:last-child) {
+    margin-right: 12px;
+}
+
+.DeliveryOptionIcon {
+    display: flex;
+    flex-direction: column;
+}
+
+.DeliveryOptionIcon div {
+    margin-top: 2px;
+    display: flex;
+}
+
+.DeliveryOptionIcon img {
+    vertical-align: middle;
+    border: 0;
+
+    width: 40px;
+    height: 40px;
+    aspect-ratio: auto 40 / 40;
+
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+.DeliveryOptionTextBlock {
+    flex: 1 1 0%;
+    padding-right: 4px;
+
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.DeliveryOptionTextBlock>div {
+    display: grid;
+    grid-template-columns: fit-content(24px) 1fr;
+    gap: 4px;
+    -webkit-box-align: baseline;
+    align-items: baseline;
+}
+
+.DeliveryOptionTitle {
+    color: var(--gray-700);
+    white-space: nowrap;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.DeliveryOptionText {
+    min-width: 0px;
+    display: flex;
+}
+
+.DeliveryOptionText span {
+    color: var(--gray-500);
+    flex: 1 1 0%;
+
+    word-break: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.DeliveryOptionText div{
+        white-space: nowrap;
+    text-align: right;
+    min-width: 2ch;
+
+        margin-left: 12px !important;
+
+        font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.OrderButton{
+    min-width: 72px;
+    align-self: center;
+
+    display: flex
+;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: 0.3s 
+cubic-bezier(0.22, 1.19, 0.22, 0.95);
+    -webkit-tap-highlight-color: transparent;
+    width: fit-content;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 4px 12px;
+    height: 28px;
+    background-color: var(--primary-100);
+    color: var(--primary-600);
+
+    margin-left: 12px !important;
 }
