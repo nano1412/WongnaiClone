@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import restaurantJSON from '../../mockData/restaurants/restaurantData.json'
+import restaurantJSON from '../../mockData/restaurantData.json'
 
 
 
