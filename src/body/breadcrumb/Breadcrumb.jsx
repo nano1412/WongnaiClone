@@ -1,5 +1,5 @@
 import React from "react";
-import breadcrumbItems from '../mockData/breadcrumbs.json';
+import breadcrumbItems from '@/mockData/breadcrumbs.json';
 
 const BreadcrumbText = (props) => {
     return (
