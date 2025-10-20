@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import restaurantJSON from '@/mockData/restaurantData.json'
 import Breadcrumb from '@/body/breadcrumb/Breadcrumb'
 import Banner from '@/body/banner/Banner'
@@ -23,7 +24,7 @@ function Body() {
 
                     <div className="RestaurantContainer">
                         <div>
-                            <Content />
+                            <Content restaurants={restaurantJSON.restaurants}/>
                         </div>
 
                         <div className="SideBar">

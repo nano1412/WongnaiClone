@@ -1,0 +1,71 @@
+.FilterContainer> :not(:last-child) {
+    border-bottom: 1px solid var(--gray-100);
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+}
+
+.OptionTitle{
+        margin-bottom: 8px !important;
+
+            font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.optionSelection{
+    display: flex
+;
+    -webkit-box-align: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.optionSelection:not(:last-child) {
+    padding-bottom: 4px;
+}
+
+.optionSelection > :not(:last-child) {
+    margin-right: 8px;
+}
+
+.optionSelectBox input{
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.optionSelectBox svg{
+    vertical-align: middle;
+        overflow: hidden;
+}
+
+.NotSelectedOption{
+    color: var(--gray-400);
+}
+
+.NotSelectedOption path{
+    opacity: 0;
+}
+
+.Hide{
+    opacity: 0;
+}
+
+.SelectedOption{
+    color: var(--blue-500);
+}
+
+.Frame{
+    color: var(--gray-500);
+}
+
+.MoreOption{
+    vertical-align: middle;
+
+        font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+
+    color: var(--blue-600);
+    cursor: pointer;
+}

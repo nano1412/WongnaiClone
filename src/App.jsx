@@ -10,6 +10,7 @@ import '@/body/content/Content.css'
 import '@/body/banner/Banner.css'
 import '@/body/FilterPanel/FilterPanel.css'
 import '@/body/SideBar/SideBar.css'
+import '@/body/body.css'
 
 
 import Header from '@/header/Header'
@@ -23,7 +24,7 @@ function App() {
   return (
     <>
       <Header/>
-      <div id='body' className='Body'>
+      <div id='body' className='body'>
         <div className='Content'>
           <Body/>
         </div>
