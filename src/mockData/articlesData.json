@@ -1,0 +1,78 @@
+[
+    {
+        "title": "Featured Articles",
+        "link": "/Guide",
+        "preview_articles": [
+            {
+                "img_link": "3d66da071a114895bd002251194e604e.webp",
+                "title": "57 ร้านอร่อยได้รับรองฮาลาล (Halal)",
+                "readtime": "5 min",
+                "link": "/articles/1",
+                "totalPin": 55,
+                "isads": false
+            },
+            {
+                "img_link": "5e520288c69e4fed903bc420e13f1b78.jpg",
+                "title": "Discover Earth Ekamai - Bangkok's Dining Landmark",
+                "readtime": "6 min",
+                "link": "/articles/2",
+                "totalPin": 55,
+                "isads": false
+            },
+            {
+                "img_link": "8ff6f79da69247b59e606b94933f8492.webp",
+                "title": "The Cafe Running Club: 10 Cafe & Brunch Spots After A Long Run",
+                "readtime": "5 min",
+                "link": "/articles/3",
+                "totalPin": 55,
+                "isads": false
+            },
+            {
+                "img_link": "651ac59c02a445e8b988aba6cea3abf4.webp",
+                "title": "Bangkok's Must-Try Premium Crafted Handroll & Japanese Pasta Spots",
+                "readtime": "4 min",
+                "link": "/articles/4",
+                "totalPin": 55,
+                "isads": false
+            }
+        ]
+    },
+    {
+        "title": "Advertised Articles",
+        "link": "/Diary",
+        "preview_articles": [
+            {
+                "img_link": "dfc1e2f0e5244dc5802552e1c6ddde0b.jpg",
+                "title": "ก๋วยจั๊บน้ำใสบางบ่อ สาขา9 สมุทรปราการ หมูกรอบกรุบกรับ แค่ห้าสิบบาท!",
+                "readtime": "4 min",
+                "link": "/articles/5",
+                "totalPin": 55,
+                "isads": true
+            },
+            {
+                "img_link": "15afbf86588545feb65c849a74f08ce0.jpg",
+                "title": "Wenzal Farm Organic  ร้านอาหารสุขภาพวิวเขาใหญ่ สดใหม่จากฟาร์ม",
+                "readtime": "7 min",
+                "link": "/articles/6",
+                "totalPin": 55,
+                "isads": true
+            },
+            {
+                "img_link": "71d35c814dea43b6b30a96681f8d7322.webp",
+                "title": "R.X x Wongnai พาไปตามรอยฟิน กินทั่วไทย กับ 240 ร้านดัง",
+                "readtime": "4 min",
+                "link": "/articles/7",
+                "totalPin": 55,
+                "isads": true
+            },
+            {
+                "img_link": "613cae7802f64b838858c0e06f21f8fc.jpg",
+                "title": "Tamarind Cove Khaoyai Hidden Gem แห่งใหม่ในเขาใหญ่",
+                "readtime": "3 min",
+                "link": "/articles/8",
+                "totalPin": 55,
+                "isads": true
+            }
+        ]
+    }
+]

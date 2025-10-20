@@ -91,36 +91,46 @@ const MultiChoice = ({ title, keyName, options, selected = [], onChange, maxDisp
 };
 
 // will reconstruct them later
-// const ForceChoice = ({ title, keyName, options, selected = null, onChange, maxDisplayOption = -1, link }) => {
-//     const displayOptions = maxDisplayOption === -1 ? options : options.slice(0, maxDisplayOption);
-//     const hiddenCount = maxDisplayOption === -1 ? 0 : Math.max(0, options.length - maxDisplayOption);
 
-//     return (
-//         <div className="mb-4">
-//             <h3 className="font-semibold">{keyName}</h3>
-//             <div className="flex flex-wrap gap-2 mt-2">
-//                 {displayOptions.map((opt) => (
-//                     <button
-//                         key={opt}
-//                         onClick={() => onChange(opt)}
-//                         className={`px-3 py-1 border rounded-full cursor-pointer ${selected === opt ? "bg-purple-500 text-white" : "text-gray-700"
-//                             }`}
-//                     >
-//                         {opt}
-//                     </button>
-//                 ))}
-//                 {hiddenCount > 0 && (
-//                     <button
-//                         onClick={link || (() => { })}
-//                         className="px-3 py-1 text-purple-500 border rounded-full cursor-pointer underline"
-//                     >
-//                         +{hiddenCount} เพิ่มเติม
-//                     </button>
-//                 )}
-//             </div>
-//         </div>
-//     );
-// };
+const ForceChoice = ({ title, keyName, options, selected = null, onChange, maxDisplayOption = -1, link}) => {
+
+
+    const displayOptions = maxDisplayOption === -1 ? options : options.slice(0, maxDisplayOption);
+    const hiddenCount = maxDisplayOption === -1 ? 0 : Math.max(0, options.length - maxDisplayOption);
+
+    return (
+        <>
+            {title != "" && <div className="OptionTitle">{title}</div>}
+            <div>
+                {displayOptions.map((opt) => (
+                    <label className="optionSelection" key={opt}>
+                        <div className="optionSelectBox">
+                            <input
+                                key={opt}
+                                type="checkbox"
+                                checked={selected === opt}
+                                onChange={() => onChange(opt)}>
+                            </input>
+                            <svg height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                className={`${selected === opt ? "SelectedOption" : "NotSelectedOption"}`}>
+                                <circle cx="10" cy="10" r="9" stroke="currentColor" strokeWidth="2"></circle>
+                                <path fillRule="evenodd" clipRule="evenodd" d="M10 16C13.3137 16 16 13.3137 16 10C16 6.68629 13.3137 4 10 4C6.68629 4 4 6.68629 4 10C4 13.3137 6.68629 16 10 16Z" fill="currentColor"></path>
+                            </svg>
+                        </div>
+                        <label className="optionText">
+                            <div>{opt}</div>
+                        </label>
+                    </label >
+                ))}
+                {hiddenCount > 0 && (
+                    <div className="MoreOption">
+                        <span>ดูเพิ่มเติม ({hiddenCount} ประเภท)</span>
+                    </div>
+                )}
+            </div>
+        </>
+    );
+};
 
 // const TextFill = ({ title, keyName, selected = "", onChange, placeholderText }) => (
 //     <div className="mb-4">
@@ -204,18 +214,18 @@ const CreateChoice = (f, selected, onChange) => {
                     onChange={(val) => onChange(f.key, val)}
                 />
             );
-        // case "force":
-        //     return (
-        //         <ForceChoice
-        //             title={f.title || ""}
-        //             keyName={f.key}
-        //             options={f.options || []}
-        //             maxDisplayOption={f.maxDisplayOption}
-        //             link={f.link}
-        //             selected={selected}
-        //             onChange={(val) => onChange(f.key, val)}
-        //         />
-        //     );
+        case "force":
+            return (
+                <ForceChoice
+                    title={f.title || ""}
+                    keyName={f.key}
+                    options={f.options || []}
+                    maxDisplayOption={f.maxDisplayOption}
+                    link={f.link}
+                    selected={selected}
+                    onChange={(val) => onChange(f.key, val)}
+                />
+            );
         // case "text":
         //     return (
         //         <TextFill
@@ -244,7 +254,7 @@ const CreateChoice = (f, selected, onChange) => {
 
 export default function FilterPanel() {
     const filterList = [
-        { type: "single", title: "", key: "catagory", options: ["ร้านอาหาร", "ร้านเสริมสวย และ สปา", "ที่พัก", "สถานที่ท่องเที่ยว"], maxDisplayOption: -1 },
+        { type: "force", title: "", key: "catagory", options: ["ร้านอาหาร", "ร้านเสริมสวย และ สปา", "ที่พัก", "สถานที่ท่องเที่ยว"], maxDisplayOption: -1 },
         { type: "single", title: "เรตติ้ง", key: "rating", options: ["3.5+", "4.0+"], maxDisplayOption: -1 },
         { type: "multi", title: "ประเภทอาหาร", key: "Tags", options: ["อาหารไทย", "อาหารตามสั่ง", "อาหารจานเดียว", "ของหวาน", "เครื่องดื่ม/น้ำผลไม้", "เบเกอรี่/เค้ก", "อาหารจีน", "อาหารเกาหลี", "อาหารญี่ปุ่น"], maxDisplayOption: 6 },
         { type: "multi", title: "ส่วนลด", key: "discount", options: ["Wongnai", "ลูกค้าเซเรเนด", "UOB", "GSB", "ลูกค้าเอไอเอส", "shell ClubSmart"], maxDisplayOption: 6 },
@@ -256,7 +266,7 @@ export default function FilterPanel() {
         // { type: "suggest", title: "Location", key: "Location", options: ["Bangkok", "Chiang Mai", "Phuket", "Pattaya"], placeholderText: "Select or type location..." },
     ];
 
-    const [selections, setSelections] = useState({});
+    const [selections, setSelections] = useState({"catagory": "ร้านอาหาร"});
 
     const handleChange = (key, value) => {
         setSelections((prev) => ({ ...prev, [key]: value }));

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import restaurantJSON from '@/mockData/restaurantData.json'
 
+const contenetPerPage = 5
+
 const ImageContent = ({ restaurant }) => {
     const placeholderImg = "/image/PlaceHolder.jpeg"
 
@@ -299,7 +301,7 @@ const Restaurant = ({ restaurant }) => {
 function Content(restaurantData) {
     return (
         <>
-           {restaurantData.restaurants.map((item, index) => (
+           {restaurantData.restaurants.slice(0, contenetPerPage).map((item, index) => (
                                 <Restaurant key={index} restaurant={item} />
                             ))}
         </>

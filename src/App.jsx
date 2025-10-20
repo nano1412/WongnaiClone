@@ -19,9 +19,6 @@ import '@/body/body.css'
 import Header from '@/header/Header'
 import Body from '@/body/Body'
 
-
-
-
 function App() {
 
   return (
