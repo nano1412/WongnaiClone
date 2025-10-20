@@ -32,25 +32,24 @@
     line-height: 28px;
 }
 
-.MapImage{
+.MapImage {
     position: relative;
 }
 
-.MapImage img{
+.MapImage img {
     width: 100%;
-        border: 0;
+    border: 0;
 }
 
-.MapButton{
-        position: absolute;
+.MapButton {
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.MapButton button{
-    display: flex
-;
+.MapButton button {
+    display: flex;
     -webkit-box-align: center;
     align-items: center;
     -webkit-box-pack: center;
@@ -58,8 +57,7 @@
     border: none;
     cursor: pointer;
     white-space: nowrap;
-    transition: 0.3s 
-cubic-bezier(0.22, 1.19, 0.22, 0.95);
+    transition: 0.3s cubic-bezier(0.22, 1.19, 0.22, 0.95);
     font-family: "DB Heavent Now", sans-serif;
     -webkit-tap-highlight-color: transparent;
     width: fit-content;
@@ -73,12 +71,328 @@ cubic-bezier(0.22, 1.19, 0.22, 0.95);
     color: var(--gray-white);
 }
 
-.MapButton svg{
-margin-right: 6px;
+.MapButton svg {
+    margin-right: 6px;
 
     color: currentcolor;
     width: 24px;
     height: 24px;
 
     overflow: hidden;
+}
+
+.ArticlesHead {
+    position: relative;
+    margin-bottom: 8px;
+
+    display: flex;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.ArticlesHead> :not(:last-child) {
+    margin-right: 12px;
+}
+
+.ArticlesTitle {
+    overflow: hidden;
+
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+}
+
+.ArticlesTitle h2 {
+    color: var(--gray-700);
+    word-break: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    margin-bottom: 0px !important;
+
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.ArticlesLink {
+    line-height: 28px;
+    font-weight: normal;
+    font-size: 16px;
+
+}
+
+.ArticlesLink a {
+    white-space: nowrap;
+    color: var(--blue-600);
+
+    margin-left: 8px !important;
+
+    font-family: "DB Heavent Now", sans-serif;
+}
+
+.ArticlesContainer {
+    padding-top: 8px;
+}
+
+.ArticlesContainer>div {
+    display: flex;
+    flex-direction: column;
+}
+
+.ArticleContainer {
+    margin-bottom: 16px;
+
+    position: relative;
+    font-family: "DB Heavent Now", sans-serif;
+    width: 100%;
+}
+
+.ArticleImage {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    height: 100%;
+
+    width: 100%;
+
+    border-radius: 6px !important;
+
+    cursor: pointer !important;
+
+    position: relative !important;
+
+}
+
+.ArticleImage a {
+    color: var(--blue-600);
+    text-decoration: none;
+}
+
+.ArticleImage label {
+    z-index: 0;
+
+    width: 100%;
+    position: relative;
+    display: block;
+    cursor: inherit;
+}
+
+.ArticleImage img {
+    object-fit: cover;
+    height: 100%;
+
+    display: block;
+    width: 100%;
+    position: relative;
+    background-color: var(--gray-50);
+    font-size: 0px;
+}
+
+.ArticleText {
+    margin-top: 6px;
+    overflow: hidden;
+
+    position: relative;
+    margin-right: 4px;
+
+    width: 100%;
+    color: var(--gray-850);
+    white-space: normal;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.ArticleText a {
+    cursor: pointer;
+    color: var(--gray-850);
+    word-break: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.SidebarSpacer {
+    margin-bottom: 16px !important;
+    text-align: center;
+}
+
+.MiniRestaurantsContainer {
+    display: block;
+    position: relative;
+    padding: 16px;
+    margin-bottom: 16px;
+    color: var(--gray-850);
+
+    margin-top: 16px !important;
+
+
+}
+
+.MiniRestaurantsTitle {
+    position: relative;
+
+    margin-bottom: 8px;
+
+    display: flex;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.MiniRestaurantsTitle div {
+    overflow: hidden;
+
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+}
+
+.MiniRestaurantsTitle h2 {
+    color: var(--gray-700);
+    word-break: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    margin-bottom: 0px !important;
+
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.MiniRestaurantContainer {
+    padding-top: 8px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.MiniRestaurantContainer>div>div {
+    display: grid;
+    grid-template-columns: 64px auto;
+    gap: 8px;
+}
+
+.MiniRestaurantContainer> :not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.MRImage a {
+    color: var(--gray-700);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.MRImage img {
+    width: 64px;
+    height: 64px;
+
+    border-radius: 4px;
+
+    display: block;
+
+    position: relative;
+    background-color: var(--gray-50);
+    font-size: 0px;
+}
+
+.MRDetail .IsAds {
+    display: inline;
+    margin-right: 4px;
+    color: var(--gray-700);
+    vertical-align: baseline;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.MRTitleContainer {
+    display: inline;
+    margin-bottom: 4px;
+
+    color: var(--gray-700);
+    cursor: pointer;
+}
+
+.MRTitleContainer>* {
+    vertical-align: baseline;
+
+}
+
+.MRTitle {
+    margin-right: 4px;
+    font-family: "DB Heavent Now", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+
+}
+
+.MRLocation {
+    color: var(--gray-550);
+}
+
+.MRStatusContainer {
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-right: -8px;
+}
+
+.MRPrice {
+
+    display: flex;
+    flex-flow: wrap;
+    margin-right: -8px;
+    margin-bottom: -8px;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.MRStatusContainer>* {
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+.MRPrice span {
+    color: var(--gray-500);
+
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.MRStatus {
+    margin-right: 8px;
+    margin-bottom: 4px;
+
+    font-family: "DB Heavent Now", sans-serif;
+    display: inline-block;
+    line-height: 16px;
+    font-weight: bold;
+}
+
+.MRAdsText {
+    color: var(--blue-600);
+
+    cursor: pointer;
+
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
 }

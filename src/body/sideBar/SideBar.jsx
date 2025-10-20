@@ -1,4 +1,6 @@
 const mapLink = "/image/map.webp";
+import articlesData from '@/mockData/articlesData.json'
+import restaurantJSON from '@/mockData/restaurantData.json'
 
 const TempBlock = (props) => {
     return (
@@ -10,15 +12,182 @@ const TempBlock = (props) => {
     )
 }
 
+const Articles = ({ articles }) => {
+    return (
+        <>
+            <div className="base-block">
+                <div className='ArticlesHead'>
+                    <div className='ArticlesTitle'>
+                        <h2>
+                            {articles.title}
+                        </h2>
+                    </div>
+
+                    <div className='ArticlesLink'>
+                        <div>
+                            <a href={articles.link}>
+                                ดูทั้งหมด
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div className='ArticlesContainer'>
+                    <div>
+                        {articles.preview_articles.map((item, index) => (
+                            <Article key={index} article={item} />
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </>
+    )
+}
+
+const Article = ({ article }) => {
+    return (
+        <>
+            <div className='ArticleContainer'>
+
+                <div className='ArticleImage'>
+                    <a>
+                        <label>
+                            <div>
+                                <img src={`/article_img/${article.img_link}`}>
+
+                                </img>
+                            </div>
+                        </label>
+                    </a>
+                </div>
+
+                <div className='ArticleText'>
+                    <a>
+                        {article.isads && (
+                            <div className="IsAds">Ad ·</div>
+                        )}
+                        {article.title}
+                    </a>
+                </div>
+
+            </div>
+        </>
+    )
+}
+
+const MRRestaurantStatus = ({ status }) => {
+    switch (status) {
+        case "open":
+            return (
+                <>
+                    <span className="MRStatus OpenGreen">
+                        เปิดอยู่
+                    </span>
+                </>
+            )
+
+        case "closed":
+            return (
+                <>
+                    <span className="MRStatus CloseRed">
+                        ปิดอยู่
+                    </span>
+                </>
+            )
+
+        case "close soon":
+            return (
+                <>
+                    <span className="MRStatus SoonOrange">
+                        กำลังจะปิด
+                    </span>
+                </>
+            )
+
+        case "open soon":
+            return (
+                <>
+                    <span className="MRStatus SoonOrange">
+                        กำลังจะเปิด
+                    </span>
+                </>
+            )
+
+        default:
+            return null;
+    }
+
+}
+
+const MiniRestaurants = ({ restaurants }) => {
+    const placeholderImg = "/image/PlaceHolder.jpeg"
+
+    return (
+        <>
+            <div className="base-block MiniRestaurantsContainer">
+                <div className='MiniRestaurantsTitle'>
+                    <div>
+                        <h2>
+                            ร้านอาหารที่น่าสนใจ
+                        </h2>
+                    </div>
+                </div>
+
+                <div className='MiniRestaurantContainer'>
+                    {restaurants.map((restaurant, index) => (
+                        <div key={index}>
+                            <div>
+                                <div className='MRImage'>
+                                    <div>
+                                        <a href={`/restaurant/${restaurant.restaurant_name}/reviews`}>
+                                            <img src={`/restaurants_img/${restaurant.image_dir}/1.jpg`}
+                                                alt={restaurant.restaurant_name}
+                                                onError={(e) => (e.target.src = placeholderImg)}
+                                                loading="lazy">
+                                            </img>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div className='MRDetail'>
+                                    {restaurant.isAds && (
+                                        <div className="IsAds">Ad ·</div>
+                                    )}
+
+                                    <a className='MRTitleContainer'>
+                                        <span className='MRTitle'>{restaurant.restaurant_name}</span>
+                                        <span className='MRLocation'>{restaurant.location}</span>
+                                    </a>
+
+                                    <div className='MRStatusContainer'>
+                                        <div className='MRPrice'>
+                                            <span>{restaurant.price_level}</span>
+                                        </div>
+                                        <MRRestaurantStatus status={restaurant.status} />
+                                    </div>
+
+                                    <a className='MRAdsText' href={`/restaurant/${restaurant.restaurant_name}/reviews`}>
+                                        {restaurant.ads_text}
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </>
+    )
+}
+
 const Map = (props) => {
     return (
         <>
             <div className="base-block">
                 <div className="MapTitle">
-                    <diiv>
-                    <h2>ค้นหาจากแผนที่</h2>
+                    <div>
+                        <h2>ค้นหาจากแผนที่</h2>
 
-                    </diiv>
+                    </div>
                 </div>
 
                 <div className="MapImage">
@@ -40,13 +209,15 @@ const Map = (props) => {
     )
 }
 
-function SideBar() {
+function SideBar({ restaurants, articles }) {
+    const restaurantsAdsOnly = restaurants.filter(restaurant => restaurant.isAds).slice(0, 2);
     return (
         <>
-            <Map f={() => {}} />
-            <TempBlock text={"ร้านอาหารที่น่าสนใจ"} />
-            <TempBlock text={"บทความ"} />
-            <TempBlock text={"ลิสต์แนะนำ"} />
+            <Map f={() => { }} />
+            <div className='SidebarSpacer'></div>
+            <MiniRestaurants restaurants={restaurantsAdsOnly} />
+            <Articles articles={articles[0]} />
+            <Articles articles={articles[1]} />
         </>
     )
 }

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import restaurantJSON from '@/mockData/restaurantData.json'
 
-const contenetPerPage = 5
+const contenetPerPage = 7
 
 const ImageContent = ({ restaurant }) => {
     const placeholderImg = "/image/PlaceHolder.jpeg"
