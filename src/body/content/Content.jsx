@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import restaurantJSON from '@/mockData/restaurantData.json'
 
-const contenetPerPage = 7
+const contenetPerPage = 5
 
 const ImageContent = ({ restaurant }) => {
     const placeholderImg = "/image/PlaceHolder.jpeg"
@@ -298,12 +298,46 @@ const Restaurant = ({ restaurant }) => {
     )
 }
 
+const NavFooter = () =>{
+    return(
+        <>
+            <div className="Nav">
+                <a className="FooterNav">
+                    <button disabled className="DisabledNav">&lt;ย้อนกลับ</button>
+                </a>
+                <a className="FooterNav">
+
+                    <button>ถัดไป&gt;</button>
+                </a>
+            </div>
+
+            <div className="FooterSearch">
+                <button>
+                    <div className="PlusSign">
+                        <img src="/image/Plus.webp">
+                        
+                        </img>
+                    </div>
+
+                    <div className="FooterSearchText">
+                        <div className="FooterSearchTextTop">หาสถานที่ที่ต้องการไม่เจอเหรอครับ</div>
+                        <div className="FooterSearchTextBottom">เพิ่มสถานที่ใหม่ใน Wongnai</div>
+                    </div>
+                </button>
+
+            </div>
+        </>
+    )
+}
+
 function Content(restaurantData) {
     return (
         <>
            {restaurantData.restaurants.slice(0, contenetPerPage).map((item, index) => (
                                 <Restaurant key={index} restaurant={item} />
                             ))}
+
+            <NavFooter/>
         </>
     )
 }
