@@ -1,0 +1,95 @@
+.BannerContainer {
+    outline: none;
+    border-radius: 0px;
+    margin: 0px calc(-4px);
+}
+
+.slick-track {
+    width: 2848px;
+    opacity: 1;
+    transform: translate3d(-890px, 0px, 0px);
+}
+
+.slick-slide>div {
+    height: 100%;
+}
+
+.BannerTab {
+    position: relative;
+}
+
+.BannerTab a {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    position: relative;
+    width: 175px;
+    height: 100px;
+    border-radius: 4px;
+    padding: 8px;
+    background: linear-gradient(rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 50%) center center / cover no-repeat, url(https://img.wongnai.com/p/400x0/2023/09/08/14ef10a….jpg);
+    background-position: center center;
+
+    color: var(--gray-700);
+    cursor: pointer;
+}
+
+.BannerTab span {
+    position: absolute;
+    z-index: 1;
+
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 16px;
+    word-break: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.35) 0px 0px 2px;
+}
+
+.Arrow {
+
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    cursor: pointer;
+    z-index: 1;
+}
+
+.Next {
+    right: -8px;
+}
+
+.Prev {
+    left: 0;
+}
+
+.Arrow div {
+    position: relative;
+}
+
+.Arrow span {
+    display: block;
+    margin: 0;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    line-height: 0;
+    width: 24px;
+    height: 24px;
+}
+
+.Rotate180 {
+    transform: rotate(180deg);
+}
+
+.slick-prev:before,
+.slick-next:before {
+  content: none !important;
+}

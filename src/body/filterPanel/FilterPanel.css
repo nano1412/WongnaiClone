@@ -4,17 +4,16 @@
     padding-bottom: 16px;
 }
 
-.OptionTitle{
-        margin-bottom: 8px !important;
+.OptionTitle {
+    margin-bottom: 8px !important;
 
-            font-weight: bold;
+    font-weight: bold;
     font-size: 16px;
     line-height: 24px;
 }
 
-.optionSelection{
-    display: flex
-;
+.optionSelection {
+    display: flex;
     -webkit-box-align: center;
     align-items: center;
     cursor: pointer;
@@ -24,48 +23,63 @@
     padding-bottom: 4px;
 }
 
-.optionSelection > :not(:last-child) {
+.optionSelection> :not(:last-child) {
     margin-right: 8px;
 }
 
-.optionSelectBox input{
+.optionSelectBox input {
     width: 0;
     height: 0;
     opacity: 0;
 }
 
-.optionSelectBox svg{
+.optionSelectBox svg {
     vertical-align: middle;
-        overflow: hidden;
+    overflow: hidden;
 }
 
-.NotSelectedOption{
+.NotSelectedOption {
     color: var(--gray-400);
 }
 
-.NotSelectedOption path{
+.NotSelectedOption path {
     opacity: 0;
 }
 
-.Hide{
+.Hide {
     opacity: 0;
 }
 
-.SelectedOption{
+.SelectedOption {
     color: var(--blue-500);
 }
 
-.Frame{
+.Frame {
     color: var(--gray-500);
 }
 
-.MoreOption{
+.MoreOption {
     vertical-align: middle;
 
-        font-weight: 500;
+    font-weight: 500;
     font-size: 14px;
     line-height: 20px;
 
     color: var(--blue-600);
     cursor: pointer;
+}
+
+.optionText {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 14px;
+    color: var(--gray-500);
+    cursor: pointer;
+    line-height: calc(18px);
+}
+
+.optionSelectBox:not(:last-child) {
+    padding-bottom: 4px;
 }

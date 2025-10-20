@@ -6,13 +6,14 @@
     padding: 0;
 }
 
-.body{
-  background-color: var(--gray-50);
-  position: relative;
-  background-image: none;
+.body {
+    background-color: var(--gray-50);
+    position: relative;
+    background-image: none;
 }
 
-h1, h2 {
+h1,
+h2 {
     margin-bottom: 8px;
     color: var(--gray-700);
 }
@@ -23,7 +24,12 @@ h1 {
     line-height: 36px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: DB Heavent Now, sans-serif;
     font-weight: 500;
     margin: 0;
@@ -36,7 +42,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 16px;
     margin-bottom: 16px;
     color: var(--gray-850);
-    
+
     border-radius: 8px;
     border: 1px solid var(--gray-75);
     background-color: var(--gray-white);
@@ -48,27 +54,62 @@ a {
     background-color: transparent;
 }
 
-svg.s24, img.s24 {
+svg.s24,
+img.s24 {
     width: 24px !important;
     height: 24px !important;
 }
 
-.input[type=checkbox], input[type=radio] {
+.input[type=checkbox],
+input[type=radio] {
     box-sizing: border-box;
     padding: 0;
 }
 
-.body input, .body select, .body textarea {
+.body input,
+.body select,
+.body textarea {
     font-size: 14px;
     line-height: 24px;
 }
 
-input, textarea {
+input,
+textarea {
     background-color: var(--gray-white);
 }
 
-button, input, optgroup, select, textarea {
+button,
+input,
+optgroup,
+select,
+textarea {
     color: inherit;
     font: inherit;
     margin: 0;
+}
+
+.slick-list,
+.slick-slider {
+    position: relative;
+    display: block;
+}
+
+.slick-list {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.slick-track {
+    margin: inherit;
+    display: flex;
+}
+
+.slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
