@@ -43,25 +43,25 @@ const PrevArrow = ({ className, onClick, isHovered, isDisabled }) => {
 function Banner() {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [isHovered, setIsHovered] = useState(false);
+    const slidesToShow = 5
 
     const settings = {
         dots: false,
         infinite: false,
         speed: 500,
-        slidesToShow: 5,
+        slidesToShow: slidesToShow,
         slidesToScroll: 5,
         beforeChange: (oldIndex, newIndex) => setCurrentSlide(newIndex),
         nextArrow: (
             <NextArrow
                 isHovered={isHovered}
-                isDisabled={currentSlide === BannerJSON.length - 1}
+                isDisabled={currentSlide >= BannerJSON.length - slidesToShow }
             />
         ),
         prevArrow: (
             <PrevArrow isHovered={isHovered} isDisabled={currentSlide === 0} />
         ),
     };
-
     return (
         <>
             <div className="BannerContainer"

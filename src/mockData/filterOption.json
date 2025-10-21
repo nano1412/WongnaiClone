@@ -1,0 +1,76 @@
+[
+    {
+        "type": "force",
+        "title": "",
+        "key": "catagory",
+        "options": [
+            "ร้านอาหาร",
+            "ร้านเสริมสวย และ สปา",
+            "ที่พัก",
+            "สถานที่ท่องเที่ยว"
+        ],
+        "maxDisplayOption": -1
+    },
+    {
+        "type": "single",
+        "title": "เรตติ้ง",
+        "key": "rating",
+        "options": [
+            "3.5+",
+            "4.0+"
+        ],
+        "maxDisplayOption": -1
+    },
+    {
+        "type": "text",
+        "title": "ค้นหาตามระยะห่างจาก",
+        "key": "location",
+        "placeholderText": "เช่น วัดพระแก้ว",
+        "key2": "distance",
+        "placeholderText2": "1 กม."
+    },
+    {
+        "type": "multi",
+        "title": "ประเภทอาหาร",
+        "key": "Tags",
+        "options": [
+            "อาหารไทย",
+            "อาหารตามสั่ง",
+            "อาหารจานเดียว",
+            "ของหวาน",
+            "เครื่องดื่ม/น้ำผลไม้",
+            "เบเกอรี่/เค้ก",
+            "อาหารจีน",
+            "อาหารเกาหลี",
+            "อาหารญี่ปุ่น"
+        ],
+        "maxDisplayOption": 6
+    },
+    {
+        "type": "multi",
+        "title": "ส่วนลด",
+        "key": "discount",
+        "options": [
+            "Wongnai",
+            "ลูกค้าเซเรเนด",
+            "UOB",
+            "GSB",
+            "ลูกค้าเอไอเอส",
+            "shell ClubSmart"
+        ],
+        "maxDisplayOption": 6
+    },
+    {
+        "type": "multi",
+        "title": "ราคา",
+        "key": "price",
+        "options": [
+            "฿",
+            "฿฿",
+            "฿฿฿",
+            "฿฿฿฿",
+            "฿฿฿฿฿"
+        ],
+        "maxDisplayOption": -1
+    }
+]

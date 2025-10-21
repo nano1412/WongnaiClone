@@ -194,3 +194,7 @@
 .FooterContentListContent span {
     word-break: initial;
 }
+
+.FooterContentListContent> :not(:last-child) {
+    margin-bottom: 8px;
+}

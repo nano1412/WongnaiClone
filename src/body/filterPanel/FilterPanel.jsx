@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import FilterOptionJSON from '@/mockData/filterOption.json'
+
 const SingleChoice = ({ title = "", options, selected = null, onChange, maxDisplayOption = -1, link }) => {
     const displayOptions = maxDisplayOption === -1 ? options : options.slice(0, maxDisplayOption);
     const hiddenCount = maxDisplayOption === -1 ? 0 : Math.max(0, options.length - maxDisplayOption);
@@ -132,60 +134,18 @@ const ForceChoice = ({ title, keyName, options, selected = null, onChange, maxDi
     );
 };
 
-// const TextFill = ({ title, keyName, selected = "", onChange, placeholderText }) => (
-//     <div className="mb-4">
-//         <h3 className="font-semibold">{keyName}</h3>
-//         <input
-//             type="text"
-//             value={selected}
-//             onChange={(e) => onChange(e.target.value)}
-//             placeholder={placeholderText}
-//             className="border rounded-lg px-3 py-1 w-full mt-2"
-//         />
-//     </div>
-// );
-
-// const SuggestTextFill = ({ title, keyName, options, selected = "", onChange, placeholderText }) => {
-//     const [focused, setFocused] = useState(false);
-//     const [lastValid, setLastValid] = useState(selected);
-
-//     const handleBlur = () => {
-//         if (!options.includes(selected)) {
-//             onChange(lastValid || "");
-//         } else {
-//             setLastValid(selected);
-//         }
-//         setFocused(false);
-//     };
-
-//     return (
-//         <div className="mb-4 relative">
-//             <h3 className="font-semibold">{keyName}</h3>
-//             <input
-//                 type="text"
-//                 value={selected}
-//                 onChange={(e) => onChange(e.target.value)}
-//                 onFocus={() => setFocused(true)}
-//                 onBlur={handleBlur}
-//                 placeholder={placeholderText}
-//                 className="border rounded-lg px-3 py-1 w-full mt-2"
-//             />
-//             {focused && (
-//                 <div className="absolute z-10 bg-white border rounded-lg mt-1 w-full max-h-48 overflow-auto shadow-lg">
-//                     {options.map((opt) => (
-//                         <div
-//                             key={opt}
-//                             onMouseDown={() => onChange(opt)}
-//                             className="px-3 py-1 hover:bg-blue-100 cursor-pointer"
-//                         >
-//                             {opt}
-//                         </div>
-//                     ))}
-//                 </div>
-//             )}
-//         </div>
-//     );
-// };
+const TextFill = ({ title, keyName, selected = "", onChange, placeholderText }) => (
+    <div className="mb-4">
+        <h3 className="font-semibold">{title}</h3>
+        <input
+            type="text"
+            value={selected}
+            onChange={(e) => onChange(e.target.value)}
+            placeholder={placeholderText}
+            className="border rounded-lg px-3 py-1 w-full mt-2"
+        />
+    </div>
+);
 
 const CreateChoice = (f, selected, onChange) => {
 
@@ -226,45 +186,22 @@ const CreateChoice = (f, selected, onChange) => {
                     onChange={(val) => onChange(f.key, val)}
                 />
             );
-        // case "text":
-        //     return (
-        //         <TextFill
-        //             title={f.title || ""}
-        //             keyName={f.key}
-        //             placeholderText={f.placeholderText || ""}
-        //             selected={selected || ""}
-        //             onChange={(val) => onChange(f.key, val)}
-        //         />
-        //     );
-        // case "suggest":
-        //     return (
-        //         <SuggestTextFill
-        //             title={f.title || ""}
-        //             keyName={f.key}
-        //             options={f.options || []}
-        //             placeholderText={f.placeholderText || ""}
-        //             selected={selected || ""}
-        //             onChange={(val) => onChange(f.key, val)}
-        //         />
-        //     );
+        case "text":
+            return (
+                <TextFill
+                    title={f.title || ""}
+                    keyName={f.key}
+                    placeholderText={f.placeholderText || ""}
+                    selected={selected || ""}
+                    onChange={(val) => onChange(f.key, val)}
+                />
+            );
         default:
             return null;
     }
 };
 
 export default function FilterPanel() {
-    const filterList = [
-        { type: "force", title: "", key: "catagory", options: ["ร้านอาหาร", "ร้านเสริมสวย และ สปา", "ที่พัก", "สถานที่ท่องเที่ยว"], maxDisplayOption: -1 },
-        { type: "single", title: "เรตติ้ง", key: "rating", options: ["3.5+", "4.0+"], maxDisplayOption: -1 },
-        { type: "multi", title: "ประเภทอาหาร", key: "Tags", options: ["อาหารไทย", "อาหารตามสั่ง", "อาหารจานเดียว", "ของหวาน", "เครื่องดื่ม/น้ำผลไม้", "เบเกอรี่/เค้ก", "อาหารจีน", "อาหารเกาหลี", "อาหารญี่ปุ่น"], maxDisplayOption: 6 },
-        { type: "multi", title: "ส่วนลด", key: "discount", options: ["Wongnai", "ลูกค้าเซเรเนด", "UOB", "GSB", "ลูกค้าเอไอเอส", "shell ClubSmart"], maxDisplayOption: 6 },
-        { type: "multi", title: "ราคา", key: "price", options: ["฿", "฿฿", "฿฿฿", "฿฿฿฿", "฿฿฿฿฿"], maxDisplayOption: -1 },
-
-        // { type: "multi", title: "Tags", key: "Tags", options: ["New", "Popular", "Discount", "Limited", "Exclusive"], maxDisplayOption: 3 },
-        // { type: "force", title: "Sort By", key: "Sort By", options: ["Newest", "Oldest", "Most Viewed"], maxDisplayOption: 2 },
-        // { type: "text", title: "Search", key: "Search Keyword", placeholderText: "Type to search..." },
-        // { type: "suggest", title: "Location", key: "Location", options: ["Bangkok", "Chiang Mai", "Phuket", "Pattaya"], placeholderText: "Select or type location..." },
-    ];
 
     const [selections, setSelections] = useState({"catagory": "ร้านอาหาร"});
 
@@ -274,16 +211,16 @@ export default function FilterPanel() {
 
     return (
         <div className="FilterContainer">
-            {filterList.map((f) => (
+            {FilterOptionJSON.map((f) => (
                 <div key={f.key}>
                     {CreateChoice(f, selections[f.key], handleChange)}
                 </div>
             ))}
 
-            <div className="mt-6 p-4 border rounded bg-gray-50">
+            {/* <div className="mt-6 p-4 border rounded bg-gray-50">
                 <h3 className="font-semibold mb-2">Current Selections:</h3>
                 <pre className="text-sm">{JSON.stringify(selections, null, 2)}</pre>
-            </div>
+            </div> */}
         </div>
     );
 }
