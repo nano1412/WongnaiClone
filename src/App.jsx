@@ -11,7 +11,6 @@ import '@/body/content/Content.css'
 import '@/body/banner/Banner.css'
 import '@/body/filterPanel/FilterPanel.css'
 import '@/body/sideBar/SideBar.css'
-import '@/body/Body.css'
 import '@/footer/Footer.css'
 
 

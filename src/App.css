@@ -118,3 +118,7 @@ textarea {
     width: auto;
     margin-left: calc(50% - 50vw);
 }
+
+.FilterPanel{
+        height: fit-content;
+}
