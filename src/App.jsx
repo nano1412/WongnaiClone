@@ -13,11 +13,13 @@ import '@/body/content/Content.css'
 import '@/body/banner/Banner.css'
 import '@/body/FilterPanel/FilterPanel.css'
 import '@/body/SideBar/SideBar.css'
-import '@/body/body.css'
+import '@/body/Body.css'
+import '@/footer/Footer.css'
 
 
 import Header from '@/header/Header'
 import Body from '@/body/Body'
+import Footer from '@/footer/Footer'
 
 function App() {
 
@@ -28,6 +30,10 @@ function App() {
         <div className='Content'>
           <Body/>
         </div>
+      </div>
+
+      <div id = 'footer' className='footer'>
+        <Footer/>
       </div>
     </>
   )

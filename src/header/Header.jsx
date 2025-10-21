@@ -67,7 +67,7 @@ const Login = () => {
                     <button className='LoginDropDownButton'>
                         <div className='DropDownWraper'>
                             <svg height="12" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg" className="Icon-sc-nqv920 hrmXJl">
-                            <path fillRule="evenodd" clipRule="evenodd" d="M9.29922 0.835282C9.49675 1.02825 9.50046 1.34481 9.30749 1.54234L4.75682 6.20078L0.206176 1.54234C0.0132122 1.3448 0.016918 1.02824 0.214452 0.835279C0.411987 0.642316 0.728548 0.646021 0.921511 0.843556L4.75682 4.76972L8.59216 0.843556C8.78513 0.646022 9.10169 0.642318 9.29922 0.835282Z" fill="currentColor"></path></svg>
+                                <path fillRule="evenodd" clipRule="evenodd" d="M9.29922 0.835282C9.49675 1.02825 9.50046 1.34481 9.30749 1.54234L4.75682 6.20078L0.206176 1.54234C0.0132122 1.3448 0.016918 1.02824 0.214452 0.835279C0.411987 0.642316 0.728548 0.646021 0.921511 0.843556L4.75682 4.76972L8.59216 0.843556C8.78513 0.646022 9.10169 0.642318 9.29922 0.835282Z" fill="currentColor"></path></svg>
                         </div>
                     </button>
 

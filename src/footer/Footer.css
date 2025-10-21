@@ -1,0 +1,196 @@
+.FooterContainer {
+    width: 100%;
+    border-top: 2px solid var(--gray-100);
+    background: var(--gray-25);
+    padding: 24px;
+    color: var(--gray-700);
+}
+
+.ContentContainer {
+    padding: 0px 16px;
+
+    display: block;
+    max-width: 984px;
+    margin: auto;
+
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+
+
+}
+
+.ContentContainer>* {
+    padding: 8px 0px;
+    position: relative;
+    display: flex;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+
+
+}
+
+.FooterHead {
+    padding: 8px 0px;
+    position: relative;
+    display: flex;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+}
+
+.CopyRightContainer {
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    align-items: center;
+
+    padding: 8px 0px;
+    position: relative;
+    display: flex;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.Copyright {
+    display: flex;
+    flex-direction: row;
+    order: 0;
+    color: var(--gray-400);
+}
+
+.Copyright>* {
+    margin-right: 4px;
+}
+
+.TOS {
+    display: flex;
+    order: 2;
+}
+
+.TOS>a {
+    color: currentcolor;
+    text-decoration: none;
+}
+
+.TOS>span {
+    word-break: initial;
+}
+
+.TOS>*+ ::before {
+    content: "|";
+    font-weight: normal;
+    color: var(--gray-400);
+    margin: 0px 4px;
+}
+
+.Language {
+    text-align: right;
+    color: var(--gray-400);
+    flex: 1 1 0%;
+    order: 3;
+}
+
+.SelectedLanguage {
+    word-break: initial;
+    font-weight: bold;
+    color: var(--gray-700);
+}
+
+.FooterContentContainer {
+    flex-wrap: wrap;
+}
+
+.UserContact {
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.UserContact> :not(:last-child) {
+    margin-bottom: 4px;
+}
+
+.DownloadContainer {
+    display: flex;
+    flex-flow: wrap;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-right: -8px;
+    margin-bottom: -8px;
+}
+
+.DownloadContainer>* {
+    margin-right: 8px;
+    margin-bottom: 8px;
+
+    color: currentcolor;
+    text-decoration: none;
+}
+
+.DownloadContainer img {
+    height: 40px;
+    width: auto;
+    cursor: pointer;
+}
+
+.SocialMediaContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.SocialMediaContainer> :not(:last-child) {
+    margin-right: 16px;
+}
+
+.SocialMediaContainer * {
+    color: currentcolor;
+    text-decoration: none;
+}
+
+.FooterContentListContainer {
+    box-sizing: border-box;
+    padding: 8px;
+    width: 20%;
+
+    display: flex;
+    flex-direction: column;
+
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.FooterContentListContainer> :not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.FooterContentListTitle {
+    word-break: initial;
+    color: var(--gray-400);
+}
+
+.FooterContentListContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.FooterContentListContent a {
+    color: currentcolor;
+    text-decoration: none;
+}
+
+.FooterContentListContent span {
+    word-break: initial;
+}
