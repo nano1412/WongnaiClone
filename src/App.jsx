@@ -1,13 +1,11 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import './App.css'
-import './color.css'
-import './header/Header.css'
+import '@/App.css'
+import '@/color.css'
+import '@/header/Header.css'
 import '@/body/breadcrumb/Breadcrumb.css'
 import '@/body/content/Content.css'
 import '@/body/banner/Banner.css'
