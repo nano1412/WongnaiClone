@@ -2,13 +2,13 @@ import React, { useState } from "react";
 
 import FilterOptionJSON from '@/mockData/filterOption.json'
 
-const SingleChoice = ({ title = "", options, selected = null, onChange, maxDisplayOption = -1, link }) => {
-    const displayOptions = maxDisplayOption === -1 ? options : options.slice(0, maxDisplayOption);
-    const hiddenCount = maxDisplayOption === -1 ? 0 : Math.max(0, options.length - maxDisplayOption);
+const SingleChoice = ({ data }) => {
+    const displayOptions = data.maxDisplayOption === -1 ? data.options : data.options.slice(0, data.maxDisplayOption);
+    const hiddenCount = data.maxDisplayOption === -1 ? 0 : Math.max(0, data.options.length - data.maxDisplayOption);
 
     return (
         <>
-            {title != "" && <div className="OptionTitle">{title}</div>}
+            {data.title != "" && <div className="OptionTitle">{data.title}</div>}
             <div>
                 {displayOptions.map((opt) => (
                     <label className="optionSelection" key={opt}>
@@ -16,11 +16,11 @@ const SingleChoice = ({ title = "", options, selected = null, onChange, maxDispl
                             <input
                                 key={opt}
                                 type="checkbox"
-                                checked={selected === opt}
-                                onChange={() => onChange(selected === opt ? null : opt)}>
+                                checked={data.selected === opt}
+                                onChange={() => data.onChange(data.selected === opt ? null : opt)}>
                             </input>
                             <svg height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
-                                className={`${selected === opt ? "SelectedOption" : "NotSelectedOption"}`}>
+                                className={`${data.selected === opt ? "SelectedOption" : "NotSelectedOption"}`}>
                                 <circle cx="10" cy="10" r="9" stroke="currentColor" strokeWidth="2"></circle>
                                 <path fillRule="evenodd" clipRule="evenodd" d="M10 16C13.3137 16 16 13.3137 16 10C16 6.68629 13.3137 4 10 4C6.68629 4 4 6.68629 4 10C4 13.3137 6.68629 16 10 16Z" fill="currentColor"></path>
                             </svg>
@@ -40,21 +40,23 @@ const SingleChoice = ({ title = "", options, selected = null, onChange, maxDispl
     );
 };
 
-const MultiChoice = ({ title, keyName, options, selected = [], onChange, maxDisplayOption = -1, link }) => {
-    const displayOptions = maxDisplayOption === -1 ? options : options.slice(0, maxDisplayOption);
-    const hiddenCount = maxDisplayOption === -1 ? 0 : Math.max(0, options.length - maxDisplayOption);
+const MultiChoice = ({ data }) => {
+    const selected = data.selected || [];
+
+    const displayOptions = data.maxDisplayOption === -1 ? data.options : data.options.slice(0, data.maxDisplayOption);
+    const hiddenCount = data.maxDisplayOption === -1 ? 0 : Math.max(0, data.options.length - data.maxDisplayOption);
 
     const toggle = (opt) => {
-        if (selected.includes(opt)) {
-            onChange(selected.filter((v) => v !== opt));
+        if (data.selected.includes(opt)) {
+            data.onChange(data.selected.filter((v) => v !== opt));
         } else {
-            onChange([...selected, opt]);
+            data.onChange([...selected, opt]);
         }
     };
 
     return (
         <>
-            {title != "" && <div className="OptionTitle">{title}</div>}
+            {data.title != "" && <div className="OptionTitle">{data.title}</div>}
             <div className="MultiChoiceContainer">
                 {displayOptions.map((opt) => (
                     <label className="optionSelection" key={opt}>
@@ -92,17 +94,15 @@ const MultiChoice = ({ title, keyName, options, selected = [], onChange, maxDisp
     );
 };
 
-// will reconstruct them later
-
-const ForceChoice = ({ title, keyName, options, selected = null, onChange, maxDisplayOption = -1, link}) => {
+const ForceChoice = ({ data }) => {
 
 
-    const displayOptions = maxDisplayOption === -1 ? options : options.slice(0, maxDisplayOption);
-    const hiddenCount = maxDisplayOption === -1 ? 0 : Math.max(0, options.length - maxDisplayOption);
+    const displayOptions = data.maxDisplayOption === -1 ? data.options : data.options.slice(0, data.maxDisplayOption);
+    const hiddenCount = data.maxDisplayOption === -1 ? 0 : Math.max(0, data.options.length - data.maxDisplayOption);
 
     return (
         <>
-            {title != "" && <div className="OptionTitle">{title}</div>}
+            {data.title != "" && <div className="OptionTitle">{data.title}</div>}
             <div>
                 {displayOptions.map((opt) => (
                     <label className="optionSelection" key={opt}>
@@ -110,11 +110,11 @@ const ForceChoice = ({ title, keyName, options, selected = null, onChange, maxDi
                             <input
                                 key={opt}
                                 type="checkbox"
-                                checked={selected === opt}
-                                onChange={() => onChange(opt)}>
+                                checked={data.selected === opt}
+                                onChange={() => data.onChange(opt)}>
                             </input>
                             <svg height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
-                                className={`${selected === opt ? "SelectedOption" : "NotSelectedOption"}`}>
+                                className={`${data.selected === opt ? "SelectedOption" : "NotSelectedOption"}`}>
                                 <circle cx="10" cy="10" r="9" stroke="currentColor" strokeWidth="2"></circle>
                                 <path fillRule="evenodd" clipRule="evenodd" d="M10 16C13.3137 16 16 13.3137 16 10C16 6.68629 13.3137 4 10 4C6.68629 4 4 6.68629 4 10C4 13.3137 6.68629 16 10 16Z" fill="currentColor"></path>
                             </svg>
@@ -134,66 +134,66 @@ const ForceChoice = ({ title, keyName, options, selected = null, onChange, maxDi
     );
 };
 
-const TextFill = ({ title, keyName, selected = "", onChange, placeholderText }) => (
-    <div className="mb-4">
-        <h3 className="font-semibold">{title}</h3>
-        <input
-            type="text"
-            value={selected}
-            onChange={(e) => onChange(e.target.value)}
-            placeholder={placeholderText}
-            className="border rounded-lg px-3 py-1 w-full mt-2"
-        />
-    </div>
-);
+const TextFill = ({ data }) => {
+
+    return (
+        <>
+            <div className="mb-4">
+                <h3 className="font-semibold">{data.title}</h3>
+                <input
+                    type="text"
+                    defaultValue={data.selected}
+                    onKeyDown={(e) => {
+                        if (e.key === "Enter") {
+                            data.onChange(e.target.value);
+                        }
+                    }}
+                    placeholder={data.placeholderText}
+                    className="border rounded-lg px-3 py-1 w-full mt-2"
+                />
+            </div>
+        </>
+    );
+}
 
 const CreateChoice = (f, selected, onChange) => {
+    const commonProps = {
+        title: f.title || "",
+        keyName: f.key,
+        options: f.options || [],
+        maxDisplayOption: f.maxDisplayOption,
+        link: f.link,
+        selected,
+        onChange: (val) => onChange(f.key, val),
+
+        maxDisplayOption: f.maxDisplayOption,
+        placeholderText: f.placeholderText || ""
+    };
+
 
     switch (f.type) {
         case "single":
             return (
                 <SingleChoice
-                    title={f.title || ""}
-                    keyName={f.key}
-                    options={f.options || []}
-                    maxDisplayOption={f.maxDisplayOption}
-                    link={f.link}
-                    selected={selected}
-                    onChange={(val) => onChange(f.key, val)}
+                    data={commonProps}
                 />
             );
         case "multi":
             return (
                 <MultiChoice
-                    title={f.title || ""}
-                    keyName={f.key}
-                    options={f.options || []}
-                    maxDisplayOption={f.maxDisplayOption}
-                    link={f.link}
-                    selected={selected || []}
-                    onChange={(val) => onChange(f.key, val)}
+                    data={commonProps}
                 />
             );
         case "force":
             return (
                 <ForceChoice
-                    title={f.title || ""}
-                    keyName={f.key}
-                    options={f.options || []}
-                    maxDisplayOption={f.maxDisplayOption}
-                    link={f.link}
-                    selected={selected}
-                    onChange={(val) => onChange(f.key, val)}
+                    data={commonProps}
                 />
             );
         case "text":
             return (
                 <TextFill
-                    title={f.title || ""}
-                    keyName={f.key}
-                    placeholderText={f.placeholderText || ""}
-                    selected={selected || ""}
-                    onChange={(val) => onChange(f.key, val)}
+                    data={commonProps}
                 />
             );
         default:
@@ -203,7 +203,7 @@ const CreateChoice = (f, selected, onChange) => {
 
 export default function FilterPanel() {
 
-    const [selections, setSelections] = useState({"catagory": "ร้านอาหาร"});
+    const [selections, setSelections] = useState({ "catagory": "ร้านอาหาร" });
 
     const handleChange = (key, value) => {
         setSelections((prev) => ({ ...prev, [key]: value }));
@@ -217,10 +217,10 @@ export default function FilterPanel() {
                 </div>
             ))}
 
-            {/* <div className="mt-6 p-4 border rounded bg-gray-50">
+            <div className="mt-6 p-4 border rounded bg-gray-50">
                 <h3 className="font-semibold mb-2">Current Selections:</h3>
                 <pre className="text-sm">{JSON.stringify(selections, null, 2)}</pre>
-            </div> */}
+            </div>
         </div>
     );
 }
