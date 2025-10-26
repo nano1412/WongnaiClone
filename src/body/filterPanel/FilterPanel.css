@@ -83,3 +83,158 @@
 .optionSelectBox:not(:last-child) {
     padding-bottom: 4px;
 }
+
+.DropdownContainer {
+    background-color: var(--gray-white) !important;
+
+    top: 100%;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 4px 11px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+.DropdownContainer>div {
+    max-height: 300px;
+    overflow-y: auto;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.DropdownContent {
+    transition: 0.2s;
+    background-color: var(--gray-white) !important;
+
+    color: inherit;
+    cursor: default;
+    display: block;
+    font-size: inherit;
+    padding: 8px 12px;
+    width: 100%;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    box-sizing: border-box;
+}
+
+.SelectedContent {
+    background-color: var(--blue-500) !important;
+    color: rgb(255, 255, 255);
+}
+
+.LocationFilterContainer {
+    position: relative;
+}
+
+.LocationFilterContainer >div {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    background-color: var(--gray-white);
+    border: 1px solid var(--gray-100);
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.LocationFilterContainer input {
+    font-size: 14px;
+    line-height: 24px;
+
+    border: none;
+    width: 100%;
+
+    background-color: var(--gray-white);
+}
+
+.DistanceContainer{
+        margin-top: 8px;
+}
+
+.DistanceContainer > div{
+        position: relative;
+    box-sizing: border-box;
+
+        background-color: var(--gray-white) !important;
+    min-height: 32px !important;
+    border-color: var(--gray-100) !important;
+
+        -webkit-box-align: center;
+    align-items: center;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+    cursor: default;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    transition: 100ms;
+    outline: 0px !important;
+
+    padding-left: 6px;
+
+}
+
+.DistanceContainer input{
+    font-size: 14px;
+    line-height: 24px;
+
+    border: none;
+
+    background-color: var(--gray-white);
+
+    border: none;
+    position: relative;
+    
+    max-width: calc(100% - 30px);
+    
+}
+
+.DistanceContainer input::placeholder {
+  color: var(--gray-850);;
+}
+
+.DropdownIcon{
+    -webkit-box-align: center;
+    align-items: center;
+    align-self: stretch;
+    display: flex
+;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+.DropdownIcon span {
+        align-self: stretch;
+    background-color: rgb(204, 204, 204);
+    margin-bottom: 8px;
+    margin-top: 8px;
+    width: 1px;
+    box-sizing: border-box;
+}
+
+.DropdownIcon div{
+    padding-left: 0px !important;
+
+    color: rgb(204, 204, 204);
+    display: flex
+;
+    padding: 8px;
+    transition: color 150ms;
+    box-sizing: border-box;
+}
+
+.DropdownIcon svg{
+    overflow: hidden;
+
+        display: inline-block;
+    fill: currentcolor;
+    line-height: 1;
+    stroke: currentcolor;
+    stroke-width: 0;
+}

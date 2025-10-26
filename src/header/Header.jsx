@@ -1,5 +1,4 @@
 import WongnaiLogo from '/image/WongnaiLogo.webp'
-import SearchIcon from '/image/search-outline.svg'
 const Logo = () => {
     return (
         <>

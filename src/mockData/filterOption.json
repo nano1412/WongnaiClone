@@ -22,12 +22,24 @@
         "maxDisplayOption": -1
     },
     {
-        "type": "text",
+        "type": "seachByDistance",
         "title": "ค้นหาตามระยะห่างจาก",
         "key": "location",
-        "placeholderText": "เช่น วัดพระแก้ว",
         "key2": "distance",
-        "placeholderText2": "1 กม."
+
+        "locationPlaceholderText": "เช่น วัดพระแก้ว",
+        "distancePlaceholderText": "1 กม.",
+        "maxDisplayOption": 7,
+        "options": [
+            "500 ม.",
+            "1 กม.",
+            "3 กม.",
+            "5 กม.",
+            "10 กม.",
+            "25 กม.",
+            "50 กม."
+           
+        ]
     },
     {
         "type": "multi",

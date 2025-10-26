@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import FilterOptionJSON from '@/mockData/filterOption.json'
 
 const SingleChoice = ({ data }) => {
@@ -134,42 +133,199 @@ const ForceChoice = ({ data }) => {
     );
 };
 
-const TextFill = ({ data }) => {
+const SeachByDistance = ({ data }) => {
+    const {
+        title = "",
+        options = [],
+        maxDisplayOption = -1,
+        selected = "",
+        selected2 = "",
+        onChange = () => { },
+        onChange2 = () => { },
+        locationPlaceholderText = "",
+        distancePlaceholderText = "",
+
+    } = data;
+
+    const [tempinputValue, setTempInputValue] = useState("");
+    const [distancePlaceholderValue, setDistancePlaceholderValue] = useState(distancePlaceholderText);
+    const [dropdownOpen, setDropdownOpen] = useState(true);
+    const distanceTextBoxRef = useRef(null);
+
+    const resetFilter = React.useCallback(() => {
+        setDistancePlaceholderValue(selected2)
+        setTempInputValue("")
+    }, [selected2]);
+
+    const filteredOptions = useMemo(() => {
+        const q = tempinputValue.trim().toLowerCase();
+        if (q === "") return options;
+        return options.filter((o) => o.toLowerCase().includes(q));
+    }, [tempinputValue, options]);
+
+    const displayOptions = maxDisplayOption === -1 ? options : options.slice(0, maxDisplayOption);
+
+    useEffect(() => {
+        const handleClickOutside = (e) => {
+            if (distanceTextBoxRef.current && !distanceTextBoxRef.current.contains(e.target)) {
+                setDropdownOpen(false);
+            } else {
+                setDropdownOpen(true);
+            }
+        };
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => document.removeEventListener("mousedown", handleClickOutside);
+    }, []);
+
+    const handleOptionClick = (opt) => {
+        setTempInputValue(opt)
+        if (opt !== selected2) onChange2(opt);
+        setDropdownOpen(false);
+
+        if (distanceTextBoxRef.current) {
+            distanceTextBoxRef.current.blur();
+        }
+    };
+
+    const handleKeyDown = (e) => {
+        if (!distanceTextBoxRef.current.contains(document.activeElement)) return;
+
+        if (e.key === "Enter") {
+            e.preventDefault();
+
+            if (filteredOptions.length > 0) {
+                const pick = filteredOptions[0];
+                if (pick !== selected2) onChange2(pick);
+                setTempInputValue(pick);
+            }
+
+            if (distanceTextBoxRef.current) {
+                distanceTextBoxRef.current.blur();
+            }
+            setDropdownOpen(false);
+        }
+    };
 
     return (
         <>
-            <div className="mb-4">
-                <h3 className="font-semibold">{data.title}</h3>
-                <input
-                    type="text"
-                    defaultValue={data.selected}
-                    onKeyDown={(e) => {
-                        if (e.key === "Enter") {
-                            data.onChange(e.target.value);
-                        }
-                    }}
-                    placeholder={data.placeholderText}
-                    className="border rounded-lg px-3 py-1 w-full mt-2"
-                />
+            <div>
+                {data.title != "" && <div className="OptionTitle">{data.title}</div>}
+
+                <div className="LocationFilterContainer">
+                    <div>
+                        <input
+                            type="text"
+                            defaultValue={selected}
+                            onKeyDown={(e) => {
+                                if (e.key === "Enter") {
+                                    onChange(e.target.value);
+                                }
+                            }}
+                            placeholder={locationPlaceholderText}
+                            className="border rounded-lg px-3 py-1 w-full mt-2"
+                        />
+                    </div>
+                </div>
+
+                <div className="DistanceContainer">
+                    <div>
+
+
+                        <input
+                            ref={distanceTextBoxRef}
+                            type="text"
+                            className="force-text-input border rounded-lg px-3 py-1 w-full"
+                            placeholder={distancePlaceholderValue}
+                            value={tempinputValue}
+                            onFocus={resetFilter}
+                            onChange={(e) => {
+                                setTempInputValue(e.target.value);
+                                setDropdownOpen(true);
+                            }}
+                            onKeyDown={handleKeyDown}
+                            aria-haspopup="listbox"
+                            aria-expanded={dropdownOpen}
+                        />
+
+                    <div className="DropdownIcon">
+                        <div>
+                            <svg height="20" width="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false" className="css-19bqh2r"><path d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"></path></svg>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="force-text-fill relative">
+
+                <div className="TextFillContainer" style={{ position: "relative" }}>
+
+
+                    {dropdownOpen && (
+                        <div
+                            className="DropdownContainer"
+                            style={{
+                                maxHeight:
+                                    maxDisplayOption === -1
+                                        ? 240
+                                        : `${Math.min(240, maxDisplayOption * 40)}px`
+                            }}
+                            role="listbox"
+                        >
+
+                            <div>
+
+                                {displayOptions.length === 0 ? (
+                                    <div className="no-option p-2 text-sm text-gray-500">no option</div>
+                                ) : (
+                                    displayOptions.map((opt) => {
+                                        const isSelected = opt === selected2;
+                                        return (
+                                            <div
+                                                key={opt}
+                                                role="option"
+                                                aria-selected={isSelected}
+                                                className={`DropdownContent ${isSelected ? "SelectedContent" : ""}`}
+                                                onMouseDown={(e) => {
+                                                    e.preventDefault();
+                                                    handleOptionClick(opt);
+                                                }}
+                                            >{opt}</div>
+                                        );
+                                    })
+                                )}
+                            </div>
+
+                        </div>
+                    )}
+                </div>
             </div>
         </>
+
+
     );
-}
+};
+
 
 const CreateChoice = (f, selected, onChange) => {
+    const [selected1, selected2] = Array.isArray(selected)
+        ? selected
+        : [selected, ""];
+
     const commonProps = {
         title: f.title || "",
-        keyName: f.key,
+        key: f.key,
         options: f.options || [],
-        maxDisplayOption: f.maxDisplayOption,
+        maxDisplayOption: f.maxDisplayOption ?? -1,
         link: f.link,
-        selected,
+        selected: selected1 ?? "",
+        selected2: selected2 ?? "",
         onChange: (val) => onChange(f.key, val),
-
-        maxDisplayOption: f.maxDisplayOption,
-        placeholderText: f.placeholderText || ""
+        onChange2: (val) => onChange(f.key2, val),
+        locationPlaceholderText: f.locationPlaceholderText || "",
+        distancePlaceholderText: f.distancePlaceholderText || "",
+        key2: f.key2,
     };
-
 
     switch (f.type) {
         case "single":
@@ -190,9 +346,10 @@ const CreateChoice = (f, selected, onChange) => {
                     data={commonProps}
                 />
             );
-        case "text":
+
+        case "seachByDistance":
             return (
-                <TextFill
+                <SeachByDistance
                     data={commonProps}
                 />
             );
@@ -203,7 +360,7 @@ const CreateChoice = (f, selected, onChange) => {
 
 export default function FilterPanel() {
 
-    const [selections, setSelections] = useState({ "catagory": "ร้านอาหาร" });
+    const [selections, setSelections] = useState({ "catagory": "ร้านอาหาร", "distance": "1 กม." });
 
     const handleChange = (key, value) => {
         setSelections((prev) => ({ ...prev, [key]: value }));
@@ -211,11 +368,23 @@ export default function FilterPanel() {
 
     return (
         <div className="FilterContainer">
-            {FilterOptionJSON.map((f) => (
-                <div key={f.key}>
-                    {CreateChoice(f, selections[f.key], handleChange)}
-                </div>
-            ))}
+            {FilterOptionJSON.map((f) => {
+                // Safe defaults to prevent undefined
+                const selectedValue =
+                    f.type === "multi"
+                        ? selections[f.key] ?? []
+                        : selections[f.key] ?? "";
+
+                const selectedValue2 = f.key2 ? selections[f.key2] ?? "" : undefined;
+
+                return (
+                    <div key={f.key}>
+                        {f.key2
+                            ? CreateChoice(f, [selectedValue, selectedValue2], handleChange)
+                            : CreateChoice(f, selectedValue, handleChange)}
+                    </div>
+                );
+            })}
 
             <div className="mt-6 p-4 border rounded bg-gray-50">
                 <h3 className="font-semibold mb-2">Current Selections:</h3>
