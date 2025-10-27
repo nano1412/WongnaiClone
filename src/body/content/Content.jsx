@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import restaurantJSON from '@/mockData/restaurantData.json'
 
-const contenetPerPage = 5
+const contenetPerPage = 12
 
 const ImageContent = ({ restaurant }) => {
     const placeholderImg = "/image/PlaceHolder.jpeg"
 
     const imagesToShow = 5;
     const fullPath = `/restaurants_img/${restaurant.image_dir}`;
-    const images = Array.from({ length: 5 }, (_, i) => `${fullPath}/${i + 1}.jpg`);
+    const images = Array.from({ length: 5 }, (_, i) => `${fullPath}/${restaurant.imgs[i]}`);
 
     const handleImageClick = (index) => {
         if (index === imagesToShow - 1) {
@@ -285,8 +285,8 @@ const Restaurant = ({ restaurant }) => {
                 </a>
                 <div className="Restaurant-block">
 
-
-                    <ImageContent restaurant={restaurant} />
+                    {(restaurant.imgs.length >= 5 && restaurant.image_count >= 5) && <ImageContent restaurant={restaurant} />}
+                    
                     <RestaurantDetail restaurant={restaurant} />
 
                     {(restaurant.delivery || restaurant.pickup) && <DeliveryOptions restaurant={restaurant} />}

@@ -14,8 +14,18 @@
       "isAds": false,
       "ads_text": "",
       "image_dir": "SiamGardenBistro_img",
-      "image_count": 6,
-      "tags": [4, 5]
+      "image_count": 20,
+      "tags": [
+        4,
+        5
+      ],
+      "imgs": [
+        "1.jpg",
+        "2.jpg",
+        "3.jpg",
+        "4.jpg",
+        "5.jpg"
+      ]
     },
     {
       "restaurant_name": "Mama’s Street Noodles",
@@ -31,8 +41,18 @@
       "isAds": false,
       "ads_text": "",
       "image_dir": "MamasStreetNoodles_img",
-      "image_count": 0,
-      "tags": [6, 7]
+      "image_count": 6,
+      "tags": [
+        6,
+        7
+      ],
+      "imgs": [
+        "1200-by-1200-images-2.jpg",
+        "images (1).jpg",
+        "images (2).jpg",
+        "images (4).jpg",
+        "images.jpg"
+      ]
     },
     {
       "restaurant_name": "The Blue Elephant",
@@ -45,11 +65,15 @@
       "pickup": false,
       "delivery": true,
       "take_out_only": false,
-      "isAds": true,
-      "ads_text": "Experience royal Thai dining",
+      "isAds": false,
+      "ads_text": "",
       "image_dir": "TheBlueElephant_img",
       "image_count": 0,
-      "tags": [4, 8]
+      "tags": [
+        4,
+        8
+      ],
+      "imgs": []
     },
     {
       "restaurant_name": "Bangkok Vegan Kitchen",
@@ -65,14 +89,24 @@
       "isAds": false,
       "ads_text": "",
       "image_dir": "BangkokVeganKitchen_img",
-      "image_count": 0,
-      "tags": [1, 9]
+      "image_count": 10,
+      "tags": [
+        1,
+        9
+      ],
+      "imgs": [
+        "images.jpg",
+        "Ponzu-tofu-poke-bowl-8733c67.jpg",
+        "tofu-salad-pineapple-quinoa-vegan-meal-1296x728-header-800x728.avif",
+        "vegan-food-bowl-1433432507.avif",
+        "what-is-a-vegan-diet-benefits-food-list-beginners-guide-alt-1440x810.webp"
+      ]
     },
     {
       "restaurant_name": "Nana Night BBQ",
       "review_score": 3.9,
       "review_count": 210,
-      "status": "open soon",
+      "status": "open",
       "price_level": "฿฿฿",
       "location": "Nana Plaza, Bangkok",
       "note": "Korean-style BBQ bar opening soon",
@@ -82,8 +116,18 @@
       "isAds": true,
       "ads_text": "Coming soon! All-you-can-eat BBQ",
       "image_dir": "NanaNightBBQ_img",
-      "image_count": 0,
-      "tags": [10, 11]
+      "image_count": 60,
+      "tags": [
+        10,
+        11
+      ],
+      "imgs": [
+        "images (1).jpg",
+        "images (2).jpg",
+        "images (3).jpg",
+        "images.jpg",
+        "korean-bbq-8087.jpg"
+      ]
     },
     {
       "restaurant_name": "Lotus Blossom Café",
@@ -99,8 +143,18 @@
       "isAds": false,
       "ads_text": "",
       "image_dir": "LotusBlossomCafe_img",
-      "image_count": 0,
-      "tags": [1, 2]
+      "image_count": 9,
+      "tags": [
+        1,
+        2
+      ],
+      "imgs": [
+        "A_small_cup_of_coffee.jpg",
+        "dia-internacional-do-cafe-supermercados-podem-usar-a-categoria-para-fidelizar-clientes-276905.jpeg",
+        "images (1).jpg",
+        "images (2).jpg",
+        "images.jpg"
+      ]
     },
     {
       "restaurant_name": "Riverside Seafood Market",
@@ -116,8 +170,18 @@
       "isAds": true,
       "ads_text": "Fresh seafood feast by the Chao Phraya",
       "image_dir": "RiversideSeafoodMarket_img",
-      "image_count": 0,
-      "tags": [12, 13]
+      "image_count": 10,
+      "tags": [
+        12,
+        13
+      ],
+      "imgs": [
+        "istock-520490716.jpg",
+        "LH-seafood-boil-gktl-googleFourByThree.jpg",
+        "p1-seafoodcollage-hh0125-gi1185677996.jpg",
+        "seafood-boil.jpg",
+        "shutterstock_1773695441-min.jpg"
+      ]
     },
     {
       "restaurant_name": "Tom Yum Factory",
@@ -133,10 +197,13 @@
       "isAds": false,
       "ads_text": "",
       "image_dir": "TomYumFactory_img",
-      "image_count": 0,
-      "tags": [4, 14]
+      "image_count": 50,
+      "tags": [
+        4,
+        14
+      ],
+      "imgs": []
     },
-
     {
       "restaurant_name": "Bangkok Ramen House",
       "review_score": 2.4,
@@ -151,8 +218,18 @@
       "isAds": false,
       "ads_text": "",
       "image_dir": "BangkokRamenHouse_img",
-      "image_count": 4,
-      "tags": [3, 15]
+      "image_count": 7,
+      "tags": [
+        3,
+        15
+      ],
+      "imgs": [
+        "20230606152327-25_Instant_ramen.webp",
+        "images (1).jpg",
+        "images.jpg",
+        "ND-Shoyu-Ramen-qflv-mediumSquareAt3X.jpg",
+        "shoyu-ramen-new-thumb-500x500.webp"
+      ]
     },
     {
       "restaurant_name": "Chiang Mai Coffee Co.",
@@ -168,8 +245,18 @@
       "isAds": false,
       "ads_text": "",
       "image_dir": "ChiangMaiCoffeeCo_img",
-      "image_count": 3,
-      "tags": [1, 2]
+      "image_count": 9,
+      "tags": [
+        1,
+        2
+      ],
+      "imgs": [
+        "A_small_cup_of_coffee.jpg",
+        "dia-internacional-do-cafe-supermercados-podem-usar-a-categoria-para-fidelizar-clientes-276905.jpeg",
+        "images (1).jpg",
+        "images (2).jpg",
+        "images.jpg"
+      ]
     },
     {
       "restaurant_name": "Isaan Delight",
@@ -185,8 +272,18 @@
       "isAds": false,
       "ads_text": "",
       "image_dir": "IsaanDelight_img",
-      "image_count": 2,
-      "tags": [16, 4]
+      "image_count": 12,
+      "tags": [
+        16,
+        4
+      ],
+      "imgs": [
+        "images (1).jpg",
+        "images (2).jpg",
+        "images.jpg",
+        "Kor-Moo-Yang.jpg",
+        "traditional-isan-cuisine-and-recommended-dishes-629974_750x.jpg"
+      ]
     },
     {
       "restaurant_name": "French Toast Bakery",
@@ -202,8 +299,18 @@
       "isAds": false,
       "ads_text": "",
       "image_dir": "FrenchToastBakery_img",
-      "image_count": 0,
-      "tags": [2, 15]
+      "image_count": 20,
+      "tags": [
+        2,
+        15
+      ],
+      "imgs": [
+        "22-10-Wholesale-Bakery-Bread-Pastry-WEB-0233-Edit-1.jpg",
+        "image (1).jpg",
+        "image.jpg",
+        "images.jpg",
+        "IMG_20250131_161712-scaled.jpg"
+      ]
     },
     {
       "restaurant_name": "Korean BBQ Palace",
@@ -219,8 +326,18 @@
       "isAds": true,
       "ads_text": "Grand opening soon!",
       "image_dir": "KoreanBBQPalace_img",
-      "image_count": 2,
-      "tags": [10, 11]
+      "image_count": 5,
+      "tags": [
+        10,
+        11
+      ],
+      "imgs": [
+        "images (1).jpg",
+        "images (2).jpg",
+        "images (3).jpg",
+        "images.jpg",
+        "korean-bbq-8087.jpg"
+      ]
     },
     {
       "restaurant_name": "Seafood Terrace",
@@ -236,8 +353,18 @@
       "isAds": true,
       "ads_text": "Try our daily seafood platter",
       "image_dir": "SeafoodTerrace_img",
-      "image_count": 5,
-      "tags": [12, 17]
+      "image_count": 20,
+      "tags": [
+        12,
+        17
+      ],
+      "imgs": [
+        "istock-520490716.jpg",
+        "LH-seafood-boil-gktl-googleFourByThree.jpg",
+        "p1-seafoodcollage-hh0125-gi1185677996.jpg",
+        "seafood-boil.jpg",
+        "shutterstock_1773695441-min.jpg"
+      ]
     }
   ],
   "tags": {

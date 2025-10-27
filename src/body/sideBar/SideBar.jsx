@@ -2,16 +2,6 @@ const mapLink = "/image/map.webp";
 import articlesData from '@/mockData/articlesData.json'
 import restaurantJSON from '@/mockData/restaurantData.json'
 
-const TempBlock = (props) => {
-    return (
-        <>
-            <div className="base-block">
-                <span>{props.text}</span>
-            </div>
-        </>
-    )
-}
-
 const Articles = ({ articles }) => {
     return (
         <>
@@ -139,7 +129,7 @@ const MiniRestaurants = ({ restaurants }) => {
                                 <div className='MRImage'>
                                     <div>
                                         <a href={`/restaurant/${restaurant.restaurant_name}/reviews`}>
-                                            <img src={`/restaurants_img/${restaurant.image_dir}/1.jpg`}
+                                            <img src={`/restaurants_img/${restaurant.image_dir}/${restaurant.imgs[0]}`}
                                                 alt={restaurant.restaurant_name}
                                                 onError={(e) => (e.target.src = placeholderImg)}
                                                 loading="lazy">
