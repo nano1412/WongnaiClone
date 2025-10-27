@@ -149,6 +149,11 @@ const MiniRestaurants = ({ restaurants }) => {
                                     </a>
 
                                     <div className='MRStatusContainer'>
+                                        <a>
+                                            <span>
+                                                {`${restaurant.review_count} รีวิว`}
+                                            </span>
+                                        </a>
                                         <div className='MRPrice'>
                                             <span>{restaurant.price_level}</span>
                                         </div>

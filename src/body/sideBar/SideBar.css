@@ -369,6 +369,12 @@
     margin-bottom: 8px;
 }
 
+.MRStatusContainer a{
+            font-size: 14px;
+    line-height: 16px;
+            color: var(--gray-500);
+}
+
 .MRPrice span {
     color: var(--gray-500);
 
@@ -379,7 +385,9 @@
 
 .MRStatus {
     margin-right: 8px;
-    margin-bottom: 4px;
+    margin-bottom: 8px;
+
+    font-size: 14px;
 
     font-family: "DB Heavent Now", sans-serif;
     display: inline-block;
