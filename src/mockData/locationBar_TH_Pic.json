@@ -1,0 +1,52 @@
+[
+    {
+        "img_link": "/TH/1.jpg",
+        "text": "กรุงเทพมหานคร",
+        "link": "1"
+    },
+    {
+        "img_link": "/TH/2.webp",
+        "text": "ชลบุรี",
+        "link": "2"
+    },
+    {
+        "img_link": "/TH/3.jpg",
+        "text": "เชียงใหม่",
+        "link": "3"
+    },
+    {
+        "img_link": "/TH/4.webp",
+        "text": "ระยอง",
+        "link": "4"
+    },
+    {
+        "img_link": "/TH/5.jpg",
+        "text": "พระนครศรีอยุธยา",
+        "link": "5"
+    },
+    {
+        "img_link": "/TH/6.webp",
+        "text": "นครราชสีมา",
+        "link": "6"
+    },
+    {
+        "img_link": "/TH/7.jpg",
+        "text": "ภูเก็ต!",
+        "link": "7"
+    },
+    {
+        "img_link": "/TH/8.webp",
+        "text": "สงขลา",
+        "link": "8"
+    },
+    {
+        "img_link": "/TH/9.jpg",
+        "text": "ขอนแก่น",
+        "link": "9"
+    },
+    {
+        "img_link": "/TH/10.jpg",
+        "text": "เชียงราย",
+        "link": "10"
+    }
+]

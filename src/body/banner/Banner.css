@@ -14,11 +14,11 @@
     height: 100%;
 }
 
-.BannerTab {
+.BannerContainer .BannerTab {
     position: relative;
 }
 
-.BannerTab a {
+.BannerContainer .BannerTab a {
     display: flex;
     flex-direction: column;
     -webkit-box-pack: justify;
@@ -35,7 +35,7 @@
     cursor: pointer;
 }
 
-.BannerTab span {
+.BannerContainer .BannerTab span {
     position: absolute;
     z-index: 1;
 

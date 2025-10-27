@@ -1,9 +1,52 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
+import Slider from "react-slick";
 
 import searchBarDataJSON from '@/mockData/searchBarData.json'
 import loginDropDownDataJSON from '@/mockData/loginDropDownData.json'
-const WongnaiLogo = '/image/WongnaiLogo.webp'
+import locationBar_Global_PicJSON from '@/mockData/locationBar_Global_Pic.json'
+import locationBar_Global_provincesJSON from '@/mockData/locationBar_Global_provinces.json'
+import locationBar_TH_PicJSON from '@/mockData/locationBar_TH_Pic.json'
+import locationBar_TH_provincesJSON from '@/mockData/locationBar_TH_provinces.json'
 
+const WongnaiLogo = '/image/WongnaiLogo.webp'
+const slidesToShow = 4;
+
+
+const ArrowLink = "/image/arrow.webp"
+
+const NextArrow = ({ className, onClick, isHovered, isDisabled }) => {
+    return (
+        <>
+            <div className={`${className} Next Arrow`} onClick={onClick} role="button"
+                style={{ display: isDisabled || !isHovered ? "none" : "flex" }}>
+                <div>
+                    <span className="Rotate180" style={{
+                        backgroundImage: `url(${ArrowLink})`,
+                    }}>
+
+                    </span>
+                </div>
+            </div>
+        </>
+    );
+};
+
+const PrevArrow = ({ className, onClick, isHovered, isDisabled }) => {
+    return (
+        <>
+            <div className={`${className} Prev Arrow`} onClick={onClick} role="button"
+                style={{ display: isDisabled || !isHovered ? "none" : "flex" }}>
+                <div>
+                    <span style={{
+                        backgroundImage: `url(${ArrowLink})`,
+                    }}>
+
+                    </span>
+                </div>
+            </div>
+        </>
+    );
+};
 
 const Logo = () => {
     return (
@@ -55,7 +98,7 @@ const SearchBar = () => {
                     </div>
                 </div>
 
-                {/* <TempBlock/> */}
+                <LocationBoxDropDown />
             </div>
 
             <div className='SerachBoxContainer'>
@@ -69,9 +112,79 @@ const SearchBar = () => {
                             <path d="M15.3914 15.9515L16.0985 15.2444L15.4631 14.6089L14.7636 15.1731L15.3914 15.9515ZM16.452 14.8908L15.6736 14.263L15.1096 14.9625L15.7449 15.5979L16.452 14.8908ZM20.6466 19.0854L21.3538 18.3783V18.3783L20.6466 19.0854ZM19.586 20.146L20.2931 19.4389L20.2931 19.4389L19.586 20.146ZM11 17C14.5899 17 17.5 14.0899 17.5 10.5H15.5C15.5 12.9853 13.4853 15 11 15V17ZM4.5 10.5C4.5 14.0899 7.41015 17 11 17V15C8.51472 15 6.5 12.9853 6.5 10.5H4.5ZM11 4C7.41015 4 4.5 6.91015 4.5 10.5H6.5C6.5 8.01472 8.51472 6 11 6V4ZM17.5 10.5C17.5 6.91015 14.5899 4 11 4V6C13.4853 6 15.5 8.01472 15.5 10.5H17.5ZM11 18.5C12.8996 18.5 14.647 17.8367 16.0192 16.7298L14.7636 15.1731C13.7341 16.0035 12.4264 16.5 11 16.5V18.5ZM3 10.5C3 14.9183 6.58172 18.5 11 18.5V16.5C7.68629 16.5 5 13.8137 5 10.5H3ZM11 2.5C6.58172 2.5 3 6.08172 3 10.5H5C5 7.18629 7.68629 4.5 11 4.5V2.5ZM19 10.5C19 6.08172 15.4183 2.5 11 2.5V4.5C14.3137 4.5 17 7.18629 17 10.5H19ZM17.2305 15.5185C18.3369 14.1463 19 12.3992 19 10.5H17C17 11.9261 16.5037 13.2336 15.6736 14.263L17.2305 15.5185ZM15.7449 15.5979L19.9395 19.7925L21.3538 18.3783L17.1591 14.1836L15.7449 15.5979ZM19.9395 19.7925C19.8419 19.6948 19.8419 19.5366 19.9395 19.4389L21.3538 20.8531C22.0372 20.1697 22.0372 19.0617 21.3538 18.3783L19.9395 19.7925ZM19.9395 19.4389C20.0372 19.3413 20.1955 19.3413 20.2931 19.4389L18.8789 20.8531C19.5623 21.5366 20.6703 21.5366 21.3538 20.8531L19.9395 19.4389ZM20.2931 19.4389L16.0985 15.2444L14.6843 16.6586L18.8789 20.8531L20.2931 19.4389Z" fill="currentColor" mask="url(#search-mask)"></path>
                         </svg>
                     </button>
-                    <SearchBoxDropBox />
+                    {/* <SearchBoxDropBox /> */}
 
                 </form>
+            </div>
+        </>
+    )
+}
+
+const LocationBoxDropDown = () => {
+    const [currentSlide, setCurrentSlide] = useState(0);
+    const [isHovered, setIsHovered] = useState(false);
+
+    const settings = {
+            dots: false,
+            infinite: false,
+            speed: 500,
+            slidesToShow: slidesToShow,
+            slidesToScroll: 5,
+            beforeChange: (oldIndex, newIndex) => setCurrentSlide(newIndex),
+            nextArrow: (
+                <NextArrow
+                    isHovered={isHovered}
+                    isDisabled={currentSlide >= locationBar_TH_PicJSON.length - slidesToShow}
+                />
+            ),
+            prevArrow: (
+                <PrevArrow isHovered={isHovered} isDisabled={currentSlide === 0} />
+            ),
+        };
+
+    return (
+        <>
+            <div className="LocationDropdownWraper">
+                <div className="LocationDropdownArrow">
+                    <svg height="10" viewBox="0 0 20 9" fill="none" xmlns="http://www.w3.org/2000/svg"><g clipPath="url(#clip0)"><path d="M1.27441 9.14515L9.10148 1.51565C9.80879 0.728276 10.9021 0.914211 11.4142 1.56014L19.3467 9.77202L1.27441 9.14515Z" fill="currentColor"></path><path fillRule="evenodd" clipRule="evenodd" d="M9.20239 1.42264C9.79546 0.846014 10.7421 0.861341 11.3163 1.45687L17.9047 8.28967H19.2913L12.0323 0.761449C11.0752 -0.231098 9.49756 -0.256645 8.50911 0.704401L0.70752 8.28967H2.13952L9.20239 1.42264Z" fill="#DCDFE0"></path></g><defs><clipPath id="clip0"><rect width="20" height="9" fill="white"></rect></clipPath></defs></svg>
+                </div>
+                <div className="LocationDropdownNavtab">
+
+                </div>
+                <div className="LocationDropdownContentContainer">
+                    <div className="LocationDropdownSliderContainer"
+                    onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}>
+                    
+                        <div className="LocationDropdownSliderTitle">ปลายทางยอดนิยม</div>
+                        <div>
+                            <Slider {...settings}>
+                                {locationBar_TH_PicJSON.map((banner) => (
+
+                                    <div className="LocationDropdownBannerTab">
+                                        <div>
+                                        <a href={`/Location/${banner.link}`}
+                                            style={{
+                                                backgroundImage: `
+                  linear-gradient(rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 50%),
+                  url(/Location${banner.img_link})
+                `,
+                                                backgroundSize: "cover",
+                                                backgroundPosition: "center center",
+                                            }}
+                                        >
+                                            <div className="LocationSliderText">
+                                                <span>{banner.text}</span>
+                                            </div>
+                                        </a>
+                                            
+                                        </div>
+                                    </div>
+                                ))}
+                            </Slider>
+                        </div>
+                    </div>
+                </div>
             </div>
         </>
     )
@@ -127,7 +240,7 @@ const Login = () => {
                                 <path fillRule="evenodd" clipRule="evenodd" d="M9.29922 0.835282C9.49675 1.02825 9.50046 1.34481 9.30749 1.54234L4.75682 6.20078L0.206176 1.54234C0.0132122 1.3448 0.016918 1.02824 0.214452 0.835279C0.411987 0.642316 0.728548 0.646021 0.921511 0.843556L4.75682 4.76972L8.59216 0.843556C8.78513 0.646022 9.10169 0.642318 9.29922 0.835282Z" fill="currentColor"></path></svg>
                         </div>
                     </button>
-                    <LoginDropDown />
+                    {/* <LoginDropDown /> */}
 
                 </div>
             </div>
@@ -170,8 +283,8 @@ function Header() {
         <>
             <div className='HeaderBG'>
                 <div className='HeaderContainer'>
-                    <div className='HeaderLeft'>
                         <Logo />
+                    <div className='HeaderLeft'>
                         <SearchBar />
                     </div>
                     <div className='HeaderRight'>

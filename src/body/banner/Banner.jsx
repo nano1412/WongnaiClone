@@ -10,11 +10,11 @@ const NextArrow = ({ className, onClick, isHovered, isDisabled }) => {
     return (
         <>
             <div className={`${className} Next Arrow`} onClick={onClick} role="button"
-            style={{display: isDisabled || !isHovered ? "none" : "flex"}}>
+                style={{ display: isDisabled || !isHovered ? "none" : "flex" }}>
                 <div>
                     <span className="Rotate180" style={{
-                                    backgroundImage: `url(${ArrowLink})`,
-                                }}>
+                        backgroundImage: `url(${ArrowLink})`,
+                    }}>
 
                     </span>
                 </div>
@@ -26,12 +26,12 @@ const NextArrow = ({ className, onClick, isHovered, isDisabled }) => {
 const PrevArrow = ({ className, onClick, isHovered, isDisabled }) => {
     return (
         <>
-            <div className={`${className} Prev Arrow`} onClick={onClick} role="button" 
-             style={{display: isDisabled || !isHovered ? "none" : "flex"}}>
+            <div className={`${className} Prev Arrow`} onClick={onClick} role="button"
+                style={{ display: isDisabled || !isHovered ? "none" : "flex" }}>
                 <div>
                     <span style={{
-                                    backgroundImage: `url(${ArrowLink})`,
-                                }}>
+                        backgroundImage: `url(${ArrowLink})`,
+                    }}>
 
                     </span>
                 </div>
@@ -55,7 +55,7 @@ function Banner() {
         nextArrow: (
             <NextArrow
                 isHovered={isHovered}
-                isDisabled={currentSlide >= BannerJSON.length - slidesToShow }
+                isDisabled={currentSlide >= BannerJSON.length - slidesToShow}
             />
         ),
         prevArrow: (
