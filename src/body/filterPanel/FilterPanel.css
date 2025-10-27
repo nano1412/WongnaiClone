@@ -109,7 +109,7 @@
 
 .DropdownContent {
     transition: 0.2s;
-    background-color: var(--gray-white) !important;
+    background-color: var(--gray-white);
 
     color: inherit;
     cursor: default;
@@ -237,4 +237,8 @@
     line-height: 1;
     stroke: currentcolor;
     stroke-width: 0;
+}
+
+.SelectedContent:hover{
+    color: black;
 }

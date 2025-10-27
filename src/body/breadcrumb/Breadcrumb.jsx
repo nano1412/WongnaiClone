@@ -13,13 +13,13 @@ const BreadcrumbText = (props) => {
                         <React.Fragment key={item.label}>
 
                             {isLast ? (
-                                <li className="listEntry">
+                                <li className="listEntry ">
                                     <span>{item.label}</span>
                                 </li>
                             ) : (
-                                <li className="listEntry">
+                                <li className="listEntry ">
                                     <a href={item.link}>
-                                        <span>{item.label}</span>
+                                        <span className="textUnderlineHover">{item.label}</span>
                                     </a>
                                     <div className="slash">
                                         <pre> / </pre>

@@ -230,13 +230,12 @@ const SeachByDistance = ({ data }) => {
                 </div>
 
                 <div className="DistanceContainer">
-                    <div onClick={() => FocusOnDistanceSearch()}>
+                    <div className="blockHoverBlueOutline" onClick={() => FocusOnDistanceSearch()}>
 
 
                         <input
                             ref={distanceTextBoxRef}
                             type="text"
-                            className="force-text-input border rounded-lg px-3 py-1 w-full"
                             placeholder={distancePlaceholderValue}
                             value={tempinputValue}
                             onFocus={resetFilter}
@@ -278,7 +277,7 @@ const SeachByDistance = ({ data }) => {
                             <div>
 
                                 {displayOptions.length === 0 ? (
-                                    <div className="no-option p-2 text-sm text-gray-500">no option</div>
+                                    <div className="no-option">no option</div>
                                 ) : (
                                     displayOptions.map((opt) => {
                                         const isSelected = opt === selected2;
@@ -287,7 +286,7 @@ const SeachByDistance = ({ data }) => {
                                                 key={opt}
                                                 role="option"
                                                 aria-selected={isSelected}
-                                                className={`DropdownContent ${isSelected ? "SelectedContent" : ""}`}
+                                                className={`selectionHover DropdownContent  ${isSelected ? "SelectedContent" : ""}`}
                                                 onMouseDown={(e) => {
                                                     e.preventDefault();
                                                     handleOptionClick(opt);
@@ -388,10 +387,10 @@ export default function FilterPanel() {
                 );
             })}
 
-            <div className="mt-6 p-4 border rounded bg-gray-50">
+            {/* <div className="mt-6 p-4 border rounded bg-gray-50">
                 <h3 className="font-semibold mb-2">Current Selections:</h3>
                 <pre className="text-sm">{JSON.stringify(selections, null, 2)}</pre>
-            </div>
+            </div> */}
         </div>
     );
 }
