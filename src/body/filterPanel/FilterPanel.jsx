@@ -1,6 +1,8 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import FilterOptionJSON from '@/mockData/filterOption.json'
 
+
+
 const SingleChoice = ({ data }) => {
     const displayOptions = data.maxDisplayOption === -1 ? data.options : data.options.slice(0, data.maxDisplayOption);
     const hiddenCount = data.maxDisplayOption === -1 ? 0 : Math.max(0, data.options.length - data.maxDisplayOption);
@@ -150,6 +152,8 @@ const SeachByDistance = ({ data }) => {
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const distanceTextBoxRef = useRef(null);
 
+    const FocusOnDistanceSearch = () => { setDropdownOpen(true); distanceTextBoxRef.current?.focus(); };
+
     const resetFilter = React.useCallback(() => {
         setDistancePlaceholderValue(selected2)
         setTempInputValue("")
@@ -226,7 +230,7 @@ const SeachByDistance = ({ data }) => {
                 </div>
 
                 <div className="DistanceContainer">
-                    <div>
+                    <div onClick={() => FocusOnDistanceSearch()}>
 
 
                         <input

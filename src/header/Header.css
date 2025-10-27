@@ -285,7 +285,7 @@
     justify-content: flex-end;
 }
 
-.tempBlock{
+.tempBlock {
     background-color: var(--gray-white) !important;
 
     top: 100%;
@@ -299,13 +299,11 @@
     box-sizing: border-box;
 }
 
-.SearchBoxDropDownContainer{
-    
+.SearchBoxDropDownContainer {
+
     /* visibility: hidden;
     opacity: 0; */
-    transition: visibility 0s 
-ease-out .25s, opacity .25s 
-ease-out;
+    transition: visibility 0s ease-out .25s, opacity .25s ease-out;
 
     position: absolute;
     max-width: calc(100% - 48px);
@@ -315,32 +313,31 @@ ease-out;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
 }
 
-.SearchBoxDropBoxContent{
-    display: flex
-;
+.SearchBoxDropBoxContent {
+    display: flex;
     -webkit-box-align: center;
     align-items: center;
 
-        padding: 16px;
+    padding: 16px;
     cursor: pointer;
 }
 
-.SearchBoxDropBoxContent div{
+.SearchBoxDropBoxContent div {
     flex: 1 1 0%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 
-        font-weight: 700;
+    font-weight: 700;
     color: var(--gray-500);
 }
 
-.SearchBoxDropBoxContent span{
+.SearchBoxDropBoxContent span {
     flex: 0 0 auto;
     margin-right: 8px;
     vertical-align: middle;
 
-        background-repeat: no-repeat;
+    background-repeat: no-repeat;
     background-size: cover;
     display: inline-block;
     vertical-align: middle;
@@ -349,17 +346,16 @@ ease-out;
     height: 24px;
 }
 
-.LoginDropDownWraper{
+.LoginDropDownWraper {
     position: absolute;
 }
 
-.LoginDropDownWraper{
-        margin-top: 50px;
-    animation: 0.25s 
-ease 0s 1 normal none running fadeIn;
+.LoginDropDownWraper {
+    margin-top: 50px;
+    animation: 0.25s ease 0s 1 normal none running fadeIn;
     overflow: auto;
 
-        position: absolute;
+    position: absolute;
     background-color: var(--gray-white);
     border: 1px solid var(--gray-100);
     border-radius: 4px;
@@ -368,23 +364,21 @@ ease 0s 1 normal none running fadeIn;
     right: 0px;
 }
 
-.LoginDropDownContainer{
-        position: relative;
-    display: flex
-;
+.LoginDropDownContainer {
+    position: relative;
+    display: flex;
     flex-direction: column;
     max-height: unset;
     overflow: auto;
 }
 
-.LoginDropDown-LoginButton{
-        padding-bottom: 8px !important;
-            padding: 16px !important;
+.LoginDropDown-LoginButton {
+    padding-bottom: 8px !important;
+    padding: 16px !important;
 }
 
-.LoginDropDown-LoginButton a{
-    display: flex
-;
+.LoginDropDown-LoginButton a {
+    display: flex;
     -webkit-box-align: center;
     align-items: center;
     -webkit-box-pack: center;
@@ -392,8 +386,7 @@ ease 0s 1 normal none running fadeIn;
     border: none;
     cursor: pointer;
     white-space: nowrap;
-    transition: 0.3s 
-cubic-bezier(0.22, 1.19, 0.22, 0.95);
+    transition: 0.3s cubic-bezier(0.22, 1.19, 0.22, 0.95);
     font-family: "DB Heavent Now", sans-serif;
     -webkit-tap-highlight-color: transparent;
     width: 100%;
@@ -408,51 +401,49 @@ cubic-bezier(0.22, 1.19, 0.22, 0.95);
     text-decoration: none;
 }
 
-.LoginDropDownSectionLine{
-        border-top: 1px solid var(--gray-100);
+.LoginDropDownSectionLine {
+    border-top: 1px solid var(--gray-100);
     margin: 8px 0px;
     width: 100%;
 }
 
-.LoginDropDownOption{
-        padding: 8px 0px;
+.LoginDropDownOption {
+    padding: 8px 0px;
     font-family: "DB Heavent Now", sans-serif;
     color: var(--gray-850);
 }
 
-.LoginDropDownOptionContent{
-        text-decoration: none;
+.LoginDropDownOptionContent {
+    text-decoration: none;
     color: var(--gray-850) !important;
 }
 
-.LoginDropDownOptionContent > div{
-        height: 32px;
+.LoginDropDownOptionContent>div {
+    height: 32px;
     cursor: pointer;
 
-        display: flex
-;
+    display: flex;
     padding: 0px 12px;
     -webkit-box-align: center;
     align-items: center;
 }
 
-.LoginDropDownOptionContent > div > :not(:last-child) {
+.LoginDropDownOptionContent>div> :not(:last-child) {
     margin-right: 12px;
 }
 
-.LoginDropDownOptionIcon{
-        width: 24px;
+.LoginDropDownOptionIcon {
+    width: 24px;
 
-            display: flex
-;
+    display: flex;
     -webkit-box-pack: center;
     justify-content: center;
     -webkit-box-align: center;
     align-items: center;
 }
 
-.LoginDropDownOptionText{
-        font-size: 14px;
+.LoginDropDownOptionText {
+    font-size: 14px;
     line-height: 20px;
     word-break: break-word;
     overflow: hidden;
@@ -460,8 +451,8 @@ cubic-bezier(0.22, 1.19, 0.22, 0.95);
     white-space: nowrap;
 }
 
-.LocationDropdownWraper{
-        position: absolute;
+.LocationDropdownWraper {
+    position: absolute;
     background-color: var(--gray-white);
     border-radius: 4px;
     width: 455px;
@@ -471,42 +462,42 @@ cubic-bezier(0.22, 1.19, 0.22, 0.95);
     top: 76px;
 }
 
-.LocationDropdownArrow{
-        position: absolute;
+.LocationDropdownArrow {
+    position: absolute;
     line-height: 0;
     top: -9px;
     left: 42px;
 }
 
-.LocationDropdownArrow svg{
+.LocationDropdownArrow svg {
     color: var(--gray-white);
 }
 
-.LocationDropdownContentContainer{
-        overflow: auto;
+.LocationDropdownContentContainer {
+    overflow: auto;
 }
 
-.LocationDropdownSliderContainer{
-        padding: 12px 12px 0px;
+.LocationDropdownSliderContainer {
+    padding: 12px 12px 0px;
 }
 
-.LocationDropdownSliderTitle{
-        font-family: "DB Heavent Now", sans-serif;
+.LocationDropdownSliderTitle {
+    font-family: "DB Heavent Now", sans-serif;
     font-size: 16px;
     color: var(--gray-850);
     margin-bottom: 12px;
 }
 
-.LocationDropdownBannerTab{
+.LocationDropdownBannerTab {
     outline: none;
 }
 
-.LocationDropdownBannerTab > div{
+.LocationDropdownBannerTab>div {
     height: 100%;
 }
 
-.LocationDropdownBannerTab a{
-        display: flex;
+.LocationDropdownBannerTab a {
+    display: flex;
     flex-direction: column;
     -webkit-box-pack: justify;
     justify-content: space-between;
@@ -516,13 +507,13 @@ cubic-bezier(0.22, 1.19, 0.22, 0.95);
     border-radius: 4px;
     padding: 8px;
 
-        color: var(--gray-700);
+    color: var(--gray-700);
     cursor: pointer;
 
     text-decoration: none;
 }
 
-.LocationSliderText{
+.LocationSliderText {
     display: flex;
     word-break: break-word;
     white-space: pre-line;
@@ -531,7 +522,7 @@ cubic-bezier(0.22, 1.19, 0.22, 0.95);
     text-shadow: rgba(0, 0, 0, 0.25) 0px 2px 2px;
 }
 
-.LocationSliderText span{
+.LocationSliderText span {
     font-size: 14px;
     font-weight: normal;
     font-family: "DB Heavent Now", sans-serif;
@@ -542,19 +533,17 @@ cubic-bezier(0.22, 1.19, 0.22, 0.95);
     display: -webkit-box;
 
 
-        color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
     text-shadow: rgba(0, 0, 0, 0.35) 0px 0px 2px;
 }
 
 .LocationDropdownSliderContainer .slick-list {
-    display: flex
-;
+    display: flex;
 }
 
 .LocationDropdownSliderContainer .slick-track {
     margin: inherit;
-    display: flex
-;
+    display: flex;
 }
 
 .LocationDropdownSliderContainer .slick-slide {
@@ -568,6 +557,92 @@ cubic-bezier(0.22, 1.19, 0.22, 0.95);
     min-height: 1px;
 }
 
-.LocationDropdownSliderContainer{
-    
+.LocationDropdown-NearMe {
+    display: flex;
+    align-items: flex-end;
+    padding: 12px;
+    border-top: 1px solid var(--gray-100);
+    border-bottom: 1px solid var(--gray-100);
+    margin-top: 12px;
+    cursor: pointer;
+}
+
+.LocationDropdown-NearMe svg {
+    color: var(--gray-700);
+    width: 18px !important;
+    height: 18px !important;
+}
+
+.LocationDropdown-NearMe span {
+    font-family: "DB Heavent Now", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--gray-850);
+    margin-left: 2px;
+}
+
+.LocationDropdown-provincesContainer {
+    height: 280px;
+}
+
+.LocationDropdown-provincesContainer div {
+    font-size: 16px;
+    font-family: "DB Heavent Now", sans-serif;
+    color: var(--gray-850);
+    padding: 12px;
+    border-bottom: 1px solid var(--gray-100);
+    cursor: pointer;
+}
+
+.LocationDropdownNavtab {
+    margin: unset;
+    height: unset;
+    background: var(--gray-white);
+    box-sizing: border-box;
+}
+
+.LocationDropdownNavtab ul {
+    overflow: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    padding: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    margin-top: 2px;
+}
+
+.LocationDropdownSelected {
+    flex: 0 0 0px;
+    list-style: none;
+    white-space: nowrap;
+    cursor: pointer;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 100%;
+    font-family: "DB Heavent Now", sans-serif;
+    font-size: 16px;
+    padding: 12px;
+    color: var(--blue-700);
+    font-weight: bold;
+    border-bottom: 2px solid var(--blue-700);
+}
+
+.LocationDropdownNotSelected {
+    flex: 0 0 0px;
+    list-style: none;
+    white-space: nowrap;
+    cursor: pointer;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 100%;
+    font-family: "DB Heavent Now", sans-serif;
+    font-size: 16px;
+    padding: 12px;
+    border-bottom: 1px solid var(--gray-100);
+    color: var(--gray-500);
+
 }

@@ -1,10 +1,31 @@
-location dropdown
+blockHoverDarken:hover, blockHoverDarken:active {
+    border-color: var(--gray-400);
+    background: var(--gray-50);
+    color: var(--gray-850);
+text-decoration: none;
+    cursor: pointer;
+}
 
-login dropdown
-interact
-add image
+blockHoverBlue:hover, blockHoverBlue:active {
+    background-color: var(--primary-700);
+    color: var(--gray-white);
+}
 
+mouseHoverPointer{
+cursor: pointer;
+}
 
-search dropdown
+textUnderlineHover:hover, textUnderlineHover:focus {
+    color: var(--gray-300);
+text-decoration: underline;
+}
 
-ผชช
+textBoldHover:hover, textBoldHover:focus {
+    color: var(--gray-900);
+    text-decoration: none;
+    outline: none;
+}
+
+hideHoverEffect:hover, hideHoverEffect:focus {
+    text-decoration: none;
+}

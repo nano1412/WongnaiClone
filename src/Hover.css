@@ -1,0 +1,36 @@
+.blockHoverDarken:hover, .blockHoverDarken:active {
+    border-color: var(--gray-400);
+    background: var(--gray-50);
+    color: var(--gray-850);
+text-decoration: none;
+    cursor: pointer;
+}
+
+.blockHoverBlue:hover, .blockHoverBlue:active {
+    background-color: var(--primary-700);
+    color: var(--gray-white);
+}
+
+.blockHoverBlueOutline:hover, .blockHoverBlueOutline:active {
+        outline: none !important;
+    border-color: var(--blue-600) !important;
+}
+
+.mouseHoverPointer{
+cursor: pointer;
+}
+
+.textUnderlineHover:hover, .textUnderlineHover:focus {
+    color: var(--gray-300);
+text-decoration: underline;
+}
+
+.textBoldHover:hover, .textBoldHover:focus {
+    color: var(--gray-900);
+    text-decoration: none;
+    outline: none;
+}
+
+.hideHoverEffect:hover, .hideHoverEffect:focus {
+    text-decoration: none;
+}
