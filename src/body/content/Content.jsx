@@ -166,9 +166,9 @@ const RestaurantDetail = ({ restaurant }) => {
                             <div className="IsAds">Ad ·</div>
                         )}
 
-                        <a className="RestaurantName">
+                        <a className="RestaurantName hideHoverEffect">
                             <div>
-                                <h5>{restaurant.restaurant_name}</h5>
+                                <h5 className="textBoldHover">{restaurant.restaurant_name}</h5>
                                 <span>{restaurant.location}</span>
                             </div>
                         </a>
@@ -239,7 +239,7 @@ const DeliveryOptions = ({ restaurant }) => {
 const DeliveryOption = ({ option }) => {
     return (
         <>
-            <a href={option.link} className="DeliveryOptionBlock">
+            <a href={option.link} className="DeliveryOptionBlock hideHoverEffect">
                 <div className="DeliveryOptionBG">
                     <div className="DeliveryOptionContent">
                         <div className="DeliveryOptionIcon">
@@ -250,7 +250,7 @@ const DeliveryOption = ({ option }) => {
                         <div className="DeliveryOptionTextBlock">
                             <div>
 
-                                <div className="DeliveryOptionTitle">
+                                <div className="DeliveryOptionTitle ">
                                     <div>{option.title}</div>
                                 </div>
                                 <div className="DeliveryOptionText">
@@ -260,7 +260,7 @@ const DeliveryOption = ({ option }) => {
                             </div>
                         </div>
                     </div>
-                    <button className="OrderButton">
+                    <button className="OrderButton blockHoverLightBlue">
                         <span>สั่ง</span>
                     </button>
                 </div>
@@ -305,14 +305,14 @@ const NavFooter = () =>{
                 <a className="FooterNav">
                     <button disabled className="DisabledNav">&lt;ย้อนกลับ</button>
                 </a>
-                <a className="FooterNav">
+                <a className="FooterNav aFake">
 
                     <button>ถัดไป&gt;</button>
                 </a>
             </div>
 
             <div className="FooterSearch">
-                <button>
+                <button className="blockHoverBlue">
                     <div className="PlusSign">
                         <img src="/image/Plus.webp">
                         

@@ -11,6 +11,11 @@ text-decoration: none;
     color: var(--gray-white);
 }
 
+.blockHoverLightBlue:hover, .blockHoverLightBlue:focus-visible {
+    background-color: var(--primary-200);
+    color: var(--primary-600);
+}
+
 .blockHoverBlueOutline:hover, .blockHoverBlueOutline:active {
         outline: none !important;
     border-color: var(--blue-600) !important;
@@ -38,4 +43,9 @@ text-decoration: underline;
 
 .selectionHover:hover {
     background-color: var(--gray-50) !important;
+}
+
+.aFake:focus, .aFake:hover {
+    color: var(--blue-700);
+    text-decoration: underline;
 }
