@@ -160,10 +160,10 @@ const SeachByDistance = ({ data }) => {
     }, [selected2]);
 
     const filteredOptions = useMemo(() => {
-        const q = tempinputValue.trim().toLowerCase();
+        const q = distancePlaceholderValue.trim().toLowerCase();
         if (q === "") return options;
         return options.filter((o) => o.toLowerCase().includes(q));
-    }, [tempinputValue, options]);
+    }, [distancePlaceholderValue, options]);
 
     const displayOptions = maxDisplayOption === -1 ? options : options.slice(0, maxDisplayOption);
 
