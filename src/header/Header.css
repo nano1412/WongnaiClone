@@ -284,3 +284,178 @@
     -webkit-box-pack: end;
     justify-content: flex-end;
 }
+
+.tempBlock{
+    background-color: var(--gray-white) !important;
+
+    top: 100%;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 4px 11px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+.SearchBoxDropDownContainer{
+    
+    /* visibility: hidden;
+    opacity: 0; */
+    transition: visibility 0s 
+ease-out .25s, opacity .25s 
+ease-out;
+
+    position: absolute;
+    max-width: calc(100% - 48px);
+    width: 100%;
+    top: 40px;
+    background: var(--gray-white);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
+}
+
+.SearchBoxDropBoxContent{
+    display: flex
+;
+    -webkit-box-align: center;
+    align-items: center;
+
+        padding: 16px;
+    cursor: pointer;
+}
+
+.SearchBoxDropBoxContent div{
+    flex: 1 1 0%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+        font-weight: 700;
+    color: var(--gray-500);
+}
+
+.SearchBoxDropBoxContent span{
+    flex: 0 0 auto;
+    margin-right: 8px;
+    vertical-align: middle;
+
+        background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 0;
+    width: 24px;
+    height: 24px;
+}
+
+.LoginDropDownWraper{
+    position: absolute;
+}
+
+.LoginDropDownWraper{
+        margin-top: 50px;
+    animation: 0.25s 
+ease 0s 1 normal none running fadeIn;
+    overflow: auto;
+
+        position: absolute;
+    background-color: var(--gray-white);
+    border: 1px solid var(--gray-100);
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 2px, rgba(0, 0, 0, 0.16) 0px 8px 16px;
+    width: 360px;
+    right: 0px;
+}
+
+.LoginDropDownContainer{
+        position: relative;
+    display: flex
+;
+    flex-direction: column;
+    max-height: unset;
+    overflow: auto;
+}
+
+.LoginDropDown-LoginButton{
+        padding-bottom: 8px !important;
+            padding: 16px !important;
+}
+
+.LoginDropDown-LoginButton a{
+    display: flex
+;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: 0.3s 
+cubic-bezier(0.22, 1.19, 0.22, 0.95);
+    font-family: "DB Heavent Now", sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    width: 100%;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    padding: 8px 12px;
+    height: 44px;
+    background-color: var(--primary-600);
+    color: var(--gray-white);
+    text-decoration: none;
+}
+
+.LoginDropDownSectionLine{
+        border-top: 1px solid var(--gray-100);
+    margin: 8px 0px;
+    width: 100%;
+}
+
+.LoginDropDownOption{
+        padding: 8px 0px;
+    font-family: "DB Heavent Now", sans-serif;
+    color: var(--gray-850);
+}
+
+.LoginDropDownOptionContent{
+        text-decoration: none;
+    color: var(--gray-850) !important;
+}
+
+.LoginDropDownOptionContent > div{
+        height: 32px;
+    cursor: pointer;
+
+        display: flex
+;
+    padding: 0px 12px;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.LoginDropDownOptionContent > div > :not(:last-child) {
+    margin-right: 12px;
+}
+
+.LoginDropDownOptionIcon{
+        width: 24px;
+
+            display: flex
+;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.LoginDropDownOptionText{
+        font-size: 14px;
+    line-height: 20px;
+    word-break: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

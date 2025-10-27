@@ -1,0 +1,32 @@
+[
+    {
+        "img_link": "/image/locationIcon.webp",
+        "text": "ร้านอาหารใกล้เคียง",
+        "link": "1"
+    },
+    {
+        "img_link": "/image/foodIcon.webp",
+        "text": "ร้านอาหาร",
+        "link": "2"
+    },
+    {
+        "img_link": "/image/makeupIcon.webp",
+        "text": "ร้านเสริมสวย และ สปา",
+        "link": "3"
+    },
+    {
+        "img_link": "/image/hotelIcon.webp",
+        "text": "ที่พัก",
+        "link": "4"
+    },
+    {
+        "img_link": "/image/photoIcon.webp",
+        "text": "สถานที่ท่องเที่ยว",
+        "link": "5"
+    },
+    {
+        "img_link": "/image/saveIcon.webp",
+        "text": "ที่บันทึกไว้",
+        "link": "6"
+    }
+]

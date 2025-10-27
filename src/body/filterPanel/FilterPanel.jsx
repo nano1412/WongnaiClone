@@ -94,8 +94,6 @@ const MultiChoice = ({ data }) => {
 };
 
 const ForceChoice = ({ data }) => {
-
-
     const displayOptions = data.maxDisplayOption === -1 ? data.options : data.options.slice(0, data.maxDisplayOption);
     const hiddenCount = data.maxDisplayOption === -1 ? 0 : Math.max(0, data.options.length - data.maxDisplayOption);
 
@@ -149,7 +147,7 @@ const SeachByDistance = ({ data }) => {
 
     const [tempinputValue, setTempInputValue] = useState("");
     const [distancePlaceholderValue, setDistancePlaceholderValue] = useState(distancePlaceholderText);
-    const [dropdownOpen, setDropdownOpen] = useState(true);
+    const [dropdownOpen, setDropdownOpen] = useState(false);
     const distanceTextBoxRef = useRef(null);
 
     const resetFilter = React.useCallback(() => {
@@ -209,7 +207,7 @@ const SeachByDistance = ({ data }) => {
     return (
         <>
             <div>
-                {data.title != "" && <div className="OptionTitle">{data.title}</div>}
+                {data.title != "" && <div className="OptionTitle">{title}</div>}
 
                 <div className="LocationFilterContainer">
                     <div>
@@ -268,7 +266,7 @@ const SeachByDistance = ({ data }) => {
                                 maxHeight:
                                     maxDisplayOption === -1
                                         ? 240
-                                        : `${Math.min(240, maxDisplayOption * 40)}px`
+                                        : `${Math.min(300, maxDisplayOption * 70)}px`
                             }}
                             role="listbox"
                         >
