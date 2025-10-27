@@ -153,8 +153,8 @@ const MiniRestaurants = ({ restaurants }) => {
                                         <div className="IsAds">Ad ·</div>
                                     )}
 
-                                    <a className='MRTitleContainer'>
-                                        <span className='MRTitle'>{restaurant.restaurant_name}</span>
+                                    <a className='MRTitleContainer hideHoverEffect'>
+                                        <span className='MRTitle textBoldHover'>{restaurant.restaurant_name}</span>
                                         <span className='MRLocation'>{restaurant.location}</span>
                                     </a>
 
@@ -195,7 +195,7 @@ const Map = (props) => {
 
                     </img>
                     <div className="MapButton">
-                        <button onClick={props.f}>
+                        <button onClick={props.f} className='blockHoverBlue'>
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="clickable text-gray-700 flex">
                                 <path d="M12 12C13.1 12 14 11.1 14 10C14 8.9 13.1 8 12 8C10.9 8 10 8.9 10 10C10 11.1 10.9 12 12 12ZM12 2C16.2 2 20 5.22 20 10.2C20 13.38 17.55 17.12 12.66 21.43C12.28 21.76 11.71 21.76 11.33 21.43C6.45 17.12 4 13.38 4 10.2C4 5.22 7.8 2 12 2Z" fill="currentColor"></path>
                             </svg>
