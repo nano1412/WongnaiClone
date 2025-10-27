@@ -1,6 +1,5 @@
 import Slider from "react-slick";
 import { useState } from 'react'
-import { ChevronLeft, ChevronRight } from "lucide-react";
 
 import BannerJSON from "@/mockData/bannerData.json"
 

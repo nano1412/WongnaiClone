@@ -129,7 +129,7 @@ const SearchBar = () => {
                     <input ref={searchTextBoxRef} autoComplete="off" enterKeyHint="search" maxLength="200" name="displayQ" placeholder="ร้านอาหาร โรงแรม ที่เที่ยว ร้านเสริมสวย สปา ..." defaultValue="" className='SearchInput'
                         onFocus={() => { setSearchDropdownOpen(true) }}
                     />
-                    <button title="Search" type="submit" className='SearchSummit'>
+                    <button title="Search" type="submit" className='SearchSummit blockHoverBlue'>
                         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="s24 text-white">
                             <mask id="search-mask" fill="currentColor">
                                 <path fillRule="evenodd" clipRule="evenodd" d="M16.5 10.5C16.5 13.5376 14.0376 16 11 16C7.96243 16 5.5 13.5376 5.5 10.5C5.5 7.46243 7.96243 5 11 5C14.0376 5 16.5 7.46243 16.5 10.5ZM15.3914 15.9515C14.1905 16.9201 12.663 17.5 11 17.5C7.13401 17.5 4 14.366 4 10.5C4 6.63401 7.13401 3.5 11 3.5C14.866 3.5 18 6.63401 18 10.5C18 12.1627 17.4203 13.6899 16.452 14.8908L20.6466 19.0854C20.9395 19.3783 20.9395 19.8531 20.6466 20.146C20.3538 20.4389 19.8789 20.4389 19.586 20.146L15.3914 15.9515Z"></path></mask>
@@ -305,16 +305,16 @@ const Login = () => {
         <>
             <div className='LoginContainer'>
                 <div className='LoginBlock'>
-                    <a href='toLogin' className='LoginButton'>
-                        <button>
+                    <a href='toLogin' className='LoginButton hideHoverEffect'>
+                        <button className="blockHoverDarken">
                             <svg height="32" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg" className="Icon-sc-nqv920 hrmXJl">
                                 <path d="M12 23.8333C18.3513 23.8333 23.5 18.6846 23.5 12.3333C23.5 5.98203 18.3513 0.8333 12 0.8333C5.64873 0.8333 0.5 5.98203 0.5 12.3333C0.5 18.6846 5.64873 23.8333 12 23.8333Z" stroke="currentColor"></path>
                                 <path d="M12 13.8333C14.4853 13.8333 16.5 11.8185 16.5 9.33325C16.5 6.84797 14.4853 4.83325 12 4.83325C9.51472 4.83325 7.5 6.84797 7.5 9.33325C7.5 11.8185 9.51472 13.8333 12 13.8333Z" stroke="currentColor"></path>
                                 <path d="M19.5 21C18.3742 18.3488 16.0113 14.8333 11.9995 14.8333C7.98765 14.8333 5.62589 18.3488 4.5 21" stroke="currentColor"></path></svg>
-                            <span> เข้าสู่ระบบ</span>
+                            <span className="hideHoverEffect"> เข้าสู่ระบบ</span>
                         </button>
                     </a>
-                    <button className='LoginDropDownButton' ref={loginTextBoxRef}
+                    <button className='LoginDropDownButton blockHoverDarken' ref={loginTextBoxRef}
                         onClick={() => setLoginDropdownOpen(true)}
                     >
                         <div className='DropDownWraper'>
@@ -342,7 +342,7 @@ const LoginDropDown = () => {
         <>
             <div className="LoginDropDownContainer">
                 <div className="LoginDropDown-LoginButton">
-                    <a href="/Login">
+                    <a href="/Login" className="blockHoverBlue">
                         <span>เข้าสู่ระบบ หรือ สมัครสมาชิก</span>
                     </a>
 
@@ -351,7 +351,7 @@ const LoginDropDown = () => {
                 <div className="LoginDropDownOption">
                     {loginDropDownDataJSON.map((item, index) => (
                         <a className="LoginDropDownOptionContent" href={item.link} key={index}>
-                            <div>
+                            <div className="selectionHover">
                                 <div className="LoginDropDownOptionIcon">
                                     <span dangerouslySetInnerHTML={{ __html: item.svg }} />
                                 </div>
