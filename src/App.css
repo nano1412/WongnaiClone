@@ -132,3 +132,7 @@ input:focus {
   outline: none;
   border: none;
 }
+
+*{
+    font-family: DB Heavent Now, sans-serif;
+}
