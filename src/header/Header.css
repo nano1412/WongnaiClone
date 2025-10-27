@@ -92,7 +92,7 @@
 }
 
 .LocationInput::placeholder {
-  color: var(--gray-700);
+  color: var(--gray-800);
   opacity: 1; 
 }
 
