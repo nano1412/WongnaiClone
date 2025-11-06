@@ -18,7 +18,6 @@
     border-bottom: 1px solid var(--gray-75);
 
     display: flex;
-    -webkit-box-align: center;
     align-items: center;
 }
 
@@ -82,9 +81,7 @@
     left: 0px;
     padding: 0px 8px 0px 12px;
     display: flex;
-    -webkit-box-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
     align-items: center;
     transform: translateY(-50%);
     top: 50%;
@@ -101,9 +98,7 @@
     right: 0px;
     padding: 0px 12px 0px 8px;
     display: flex;
-    -webkit-box-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
     align-items: center;
     transform: translateY(-50%);
     top: 50%;
@@ -120,7 +115,6 @@
 
 .HeaderLeft {
     display: flex;
-    -webkit-box-align: center;
     align-items: center;
 }
 
@@ -163,16 +157,13 @@
 .SearchSummit {
     border-radius: 0px 8px 8px 0px;
     display: flex;
-    -webkit-box-align: center;
     align-items: center;
-    -webkit-box-pack: center;
     justify-content: center;
     border: none;
     cursor: pointer;
     white-space: nowrap;
     transition: 0.3s cubic-bezier(0.22, 1.19, 0.22, 0.95);
     font-family: "DB Heavent Now", sans-serif;
-    -webkit-tap-highlight-color: transparent;
     width: fit-content;
     font-weight: 500;
     font-size: 16px;
@@ -190,9 +181,7 @@
     flex: 1 1 0%;
     display: flex;
     padding-left: 8px;
-    -webkit-box-align: center;
     align-items: center;
-    -webkit-box-pack: end;
     justify-content: flex-end;
 }
 
@@ -211,7 +200,6 @@
 
 .LoginButton button {
     display: flex;
-    -webkit-box-align: center;
     align-items: center;
     box-sizing: content-box;
     border-radius: 20px;
@@ -223,7 +211,6 @@
     font-size: 16px;
     height: 40px;
     width: auto;
-    -webkit-box-pack: center;
     justify-content: center;
     transition: 0.2s ease-in-out;
     cursor: pointer;
@@ -250,7 +237,6 @@
 
 .LoginDropDownButton {
     display: flex;
-    -webkit-box-align: center;
     align-items: center;
     box-sizing: content-box;
     border-radius: 50%;
@@ -263,7 +249,6 @@
     font-family: "DB Heavent Now", sans-serif;
     font-size: 16px;
     height: 40px;
-    -webkit-box-pack: center;
     justify-content: center;
 
     transition: 0.2s ease-in-out;
@@ -285,9 +270,7 @@
     flex: 1 1 0%;
     display: flex;
     padding-left: 8px;
-    -webkit-box-align: center;
     align-items: center;
-    -webkit-box-pack: end;
     justify-content: flex-end;
 }
 
@@ -321,7 +304,6 @@
 
 .SearchBoxDropBoxContent {
     display: flex;
-    -webkit-box-align: center;
     align-items: center;
 
     padding: 16px;
@@ -385,16 +367,13 @@
 
 .LoginDropDown-LoginButton a {
     display: flex;
-    -webkit-box-align: center;
     align-items: center;
-    -webkit-box-pack: center;
     justify-content: center;
     border: none;
     cursor: pointer;
     white-space: nowrap;
     transition: 0.3s cubic-bezier(0.22, 1.19, 0.22, 0.95);
     font-family: "DB Heavent Now", sans-serif;
-    -webkit-tap-highlight-color: transparent;
     width: 100%;
     border-radius: 8px;
     font-weight: 500;
@@ -430,7 +409,6 @@
 
     display: flex;
     padding: 0px 12px;
-    -webkit-box-align: center;
     align-items: center;
 }
 
@@ -442,9 +420,7 @@
     width: 24px;
 
     display: flex;
-    -webkit-box-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
     align-items: center;
 }
 
@@ -505,7 +481,6 @@
 .LocationDropdownBannerTab a {
     display: flex;
     flex-direction: column;
-    -webkit-box-pack: justify;
     justify-content: space-between;
     position: relative;
     width: 115px;
@@ -536,7 +511,6 @@
     word-break: break-word;
     overflow: hidden;
     text-overflow: ellipsis;
-    display: -webkit-box;
 
 
     color: rgb(255, 255, 255);
@@ -625,7 +599,6 @@
     white-space: nowrap;
     cursor: pointer;
     display: flex;
-    -webkit-box-pack: center;
     justify-content: center;
     width: 100%;
     font-family: "DB Heavent Now", sans-serif;
@@ -642,7 +615,6 @@
     white-space: nowrap;
     cursor: pointer;
     display: flex;
-    -webkit-box-pack: center;
     justify-content: center;
     width: 100%;
     font-family: "DB Heavent Now", sans-serif;

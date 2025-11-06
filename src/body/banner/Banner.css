@@ -45,7 +45,6 @@
     word-break: break-word;
     overflow: hidden;
     text-overflow: ellipsis;
-    display: -webkit-box;
 
     color: rgb(255, 255, 255);
     text-shadow: rgba(0, 0, 0, 0.35) 0px 0px 2px;

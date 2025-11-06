@@ -14,7 +14,6 @@
 
 .optionSelection {
     display: flex;
-    -webkit-box-align: center;
     align-items: center;
     cursor: pointer;
 }
@@ -71,7 +70,6 @@
 
 .optionText {
     display: flex;
-    -webkit-box-align: center;
     align-items: center;
     flex-wrap: wrap;
     font-size: 14px;
@@ -118,7 +116,6 @@
     padding: 8px 12px;
     width: 100%;
     user-select: none;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     box-sizing: border-box;
 }
 
@@ -131,9 +128,8 @@
     position: relative;
 }
 
-.LocationFilterContainer >div {
+.LocationFilterContainer>div {
     display: flex;
-    -webkit-box-align: center;
     align-items: center;
     background-color: var(--gray-white);
     border: 1px solid var(--gray-100);
@@ -151,19 +147,18 @@
     background-color: var(--gray-white);
 }
 
-.DistanceContainer{
-        margin-top: 8px;
+.DistanceContainer {
+    margin-top: 8px;
 }
 
-.DistanceContainer > div{
-        position: relative;
+.DistanceContainer>div {
+    position: relative;
     box-sizing: border-box;
 
-        background-color: var(--gray-white) !important;
+    background-color: var(--gray-white) !important;
     min-height: 32px !important;
     border-color: var(--gray-100) !important;
 
-        -webkit-box-align: center;
     align-items: center;
     border-radius: 4px;
     border-style: solid;
@@ -171,7 +166,6 @@
     cursor: default;
     display: flex;
     flex-wrap: wrap;
-    -webkit-box-pack: justify;
     justify-content: space-between;
     transition: 100ms;
     outline: 0px !important;
@@ -180,7 +174,7 @@
 
 }
 
-.DistanceContainer input{
+.DistanceContainer input {
     font-size: 14px;
     line-height: 24px;
 
@@ -190,27 +184,26 @@
 
     border: none;
     position: relative;
-    
+
     max-width: calc(100% - 30px);
-    
+
 }
 
 .DistanceContainer input::placeholder {
-  color: var(--gray-850);;
+    color: var(--gray-850);
+    ;
 }
 
-.DropdownIcon{
-    -webkit-box-align: center;
+.DropdownIcon {
     align-items: center;
     align-self: stretch;
-    display: flex
-;
+    display: flex;
     flex-shrink: 0;
     box-sizing: border-box;
 }
 
 .DropdownIcon span {
-        align-self: stretch;
+    align-self: stretch;
     background-color: rgb(204, 204, 204);
     margin-bottom: 8px;
     margin-top: 8px;
@@ -218,27 +211,26 @@
     box-sizing: border-box;
 }
 
-.DropdownIcon div{
+.DropdownIcon div {
     padding-left: 0px !important;
 
     color: rgb(204, 204, 204);
-    display: flex
-;
+    display: flex;
     padding: 8px;
     transition: color 150ms;
     box-sizing: border-box;
 }
 
-.DropdownIcon svg{
+.DropdownIcon svg {
     overflow: hidden;
 
-        display: inline-block;
+    display: inline-block;
     fill: currentcolor;
     line-height: 1;
     stroke: currentcolor;
     stroke-width: 0;
 }
 
-.SelectedContent:hover{
+.SelectedContent:hover {
     color: black;
 }

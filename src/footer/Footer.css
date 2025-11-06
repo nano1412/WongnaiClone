@@ -24,7 +24,6 @@
     padding: 8px 0px;
     position: relative;
     display: flex;
-    -webkit-box-pack: start;
     justify-content: flex-start;
 
     font-weight: normal;
@@ -38,19 +37,16 @@
     padding: 8px 0px;
     position: relative;
     display: flex;
-    -webkit-box-pack: start;
     justify-content: flex-start;
 }
 
 .CopyRightContainer {
     flex-wrap: wrap;
-    -webkit-box-align: center;
     align-items: center;
 
     padding: 8px 0px;
     position: relative;
     display: flex;
-    -webkit-box-pack: start;
     justify-content: flex-start;
 
     font-weight: normal;
@@ -125,7 +121,6 @@
 .DownloadContainer {
     display: flex;
     flex-flow: wrap;
-    -webkit-box-align: center;
     align-items: center;
     margin-right: -8px;
     margin-bottom: -8px;
