@@ -21,7 +21,6 @@
 .BannerContainer .BannerTab a {
     display: flex;
     flex-direction: column;
-    -webkit-box-pack: justify;
     justify-content: space-between;
     position: relative;
     width: 175px;
